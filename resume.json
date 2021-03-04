@@ -1,0 +1,349 @@
+{
+  "basics": {
+    "name": "Elmar Kenigs",
+    "label": "Full Stack Node.js Software Engineer",
+    "image": "https://avatars.githubusercontent.com/u/15612217?v=4",
+    "email": "elmar.kenigs@gmail.com",
+    "phone": "",
+    "url": "https://elmars.kenigs.de",
+    "summary": "Elmar is a full-stack web developer with over 8 year’s experience. Highly skilled in software design, architecture, development, and clean code. Goal-oriented and able to handle multiple tasks simultaneously. Motivated, hardworking, reliable, and productive.",
+    "profiles": [
+      {
+        "network": "gitconnected",
+        "username": "ekenigs",
+        "url": "https://gitconnected.com/ekenigs"
+      },
+      {
+        "network": "GitHub",
+        "username": "ekenigs",
+        "url": "https://github.com/ekenigs"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/elmar-kenigs",
+        "username": "elmar-kenigs"
+      }
+    ],
+    "headline": "",
+    "blog": null,
+    "yearsOfExperience": 10,
+    "username": "ekenigs",
+    "locationAsString": "Hamburg, Germany",
+    "region": "Hamburg, Germany",
+    "karma": 11,
+    "id": "044a9862-b67e-4db7-9132-c518ccbab12e",
+    "followers": 4,
+    "following": 0,
+    "picture": "https://avatars.githubusercontent.com/u/15612217?v=4",
+    "website": "https://elmar.kenigs.de"
+  },
+  "skills": [
+    {
+      "name": "Node.js",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "JavaScript",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "TypeScript",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "MongoDB",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "React.js",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "React-Native",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Angular.js",
+      "level": "Intermediate",
+      "keywords": [],
+      "rating": 3,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Express.js",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Nest.js",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Hapi.js",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Flutter",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Firebase",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Docker",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "REST API",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "CI/CD",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Testing",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Electron.js",
+      "level": "Intermediate",
+      "keywords": [],
+      "rating": 3,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "GIT",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    }
+  ],
+  "projects": [],
+  "work": [
+    {
+      "name": "E-FARM.COM",
+      "location": "Hamburg, Germany",
+      "description": "",
+      "position": "Backend Node.js Software Engineer (Contractor/freelancer)",
+      "url": "https://e-farm.com/en/",
+      "startDate": "2020-03-01",
+      "endDate": "2021-01-01",
+      "summary": "Microservices\n\nTools & Technologies & Frameworks:\nNode.js, TypeScript, JavaScript, Nest.js, RabbitMQ, MongoDB, Testing, Docker, CI/CD, Git",
+      "highlights": [],
+      "isCurrentRole": false,
+      "start": { "year": 2020, "month": 3 },
+      "end": { "year": 2021, "month": 1 },
+      "company": "E-FARM.COM",
+      "website": "https://e-farm.com/en/"
+    },
+    {
+      "name": "Lokalportal GmbH",
+      "location": "Hamburg, Germany",
+      "description": "",
+      "position": "React Frontend Engineer  (Contractor/freelancer)",
+      "url": "https://lokalportal.de/",
+      "startDate": "2019-08-01",
+      "endDate": "2020-03-01",
+      "summary": "Digital Local Media Platform for B2B & B2C \n\nTools & Technologies & Frameworks:\nJavaScript, TypeScript, React.js, CI/CD, Testing, HTML5, CSS (SCSS), Git",
+      "highlights": [],
+      "isCurrentRole": false,
+      "start": { "year": 2019, "month": 8 },
+      "end": { "year": 2020, "month": 3 },
+      "company": "Lokalportal GmbH",
+      "website": "https://lokalportal.de/"
+    },
+    {
+      "name": "Hermes BorderGuru GmbH",
+      "location": "Hamburg, Germany",
+      "description": "",
+      "position": "Team Lead/Full Stack Software Engineer",
+      "url": "https://www.hermesworld.com/int/our-services/global-e-commerce/",
+      "startDate": "2015-11-01",
+      "endDate": "2019-08-01",
+      "summary": "Agile product development of the large-scale logistic platform as SaaS. Team development. Communication across the teams.\n\nTools & Technologies & Frameworks:\nNode.js, JavaScript, TypeScript, MongoDB, Angular.js, React.js, React Native, Electron, Flutter, Microservices, REST, Docker, CI/CD, Testing, HTML5, CSS (SCSS), Git",
+      "highlights": [],
+      "isCurrentRole": false,
+      "start": { "year": 2015, "month": 11 },
+      "end": { "year": 2019, "month": 8 },
+      "company": "Hermes BorderGuru GmbH",
+      "website": "https://www.hermesworld.com/int/our-services/global-e-commerce/"
+    },
+    {
+      "name": "Yasni GmbH",
+      "location": "Frankfurt am Main, Germany",
+      "description": "",
+      "position": "Software Engineer",
+      "url": "http://www.yasni.de/",
+      "startDate": "2014-12-01",
+      "endDate": "2015-10-01",
+      "summary": "Digital Advertising Platform for B2B & B2C\n\nTools & Technologies & Frameworks:\nPHP, JavaScript, Apache Cordova, Angular.js, CSS3, HTML5, SQL, Node.js, Git",
+      "highlights": [],
+      "isCurrentRole": false,
+      "start": { "year": 2014, "month": 12 },
+      "end": { "year": 2015, "month": 10 },
+      "company": "Yasni GmbH",
+      "website": "http://www.yasni.de/"
+    },
+    {
+      "name": "Freelance",
+      "location": "Frankfurt am Main, Germany",
+      "description": "",
+      "position": "Software Developer",
+      "url": "",
+      "startDate": "2013-01-01",
+      "endDate": "2013-03-01",
+      "summary": "Websites, SPA\n\nTools & Technologies & Frameworks:\nJavaScript, JQuery, Angular.js, CSS3, HTML5, Bootstrap, Node.js, Git",
+      "highlights": [],
+      "isCurrentRole": false,
+      "start": { "year": 2013, "month": 1 },
+      "end": { "year": 2013, "month": 3 },
+      "company": "Freelance",
+      "website": ""
+    },
+    {
+      "name": "Agent Stick",
+      "location": "Riga, Latvia",
+      "description": "",
+      "position": "Mobile game developer",
+      "url": "",
+      "startDate": "2011-08-01",
+      "endDate": "2013-02-01",
+      "summary": "Mobile game “Agent Stick” development for iOS.\n\nTools & Technologies & Frameworks:\nObjective-C, Cocos2D, Box2D, Autodesk Maya",
+      "highlights": [],
+      "isCurrentRole": false,
+      "start": { "year": 2011, "month": 8 },
+      "end": { "year": 2013, "month": 2 },
+      "company": "Agent Stick",
+      "website": ""
+    }
+  ],
+  "publications": [],
+  "education": [
+    {
+      "institution": "Riga Technical University",
+      "url": "",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Engineering",
+      "startDate": "2010-09-01",
+      "endDate": "2013-06-01",
+      "score": "",
+      "courses": [],
+      "description": "* Software engineering\n* System analysis\n* Basics of database technologies\n* Basics of artificial intelligence",
+      "activities": "",
+      "start": { "year": 2010, "month": 9 },
+      "end": { "year": 2013, "month": 6 },
+      "website": "",
+      "gpa": ""
+    },
+    {
+      "institution": "Riga State Technical School",
+      "url": "",
+      "area": "Programming technician",
+      "studyType": "3rd qualification level",
+      "startDate": "2004-09-01",
+      "endDate": "2008-06-01",
+      "score": "",
+      "courses": [],
+      "description": "* Programming technologies\n* Basics of database technologies\n* Data structures and algorithms\n* Web technologies\n* Basics of computer networks",
+      "activities": "",
+      "start": { "year": 2004, "month": 9 },
+      "end": { "year": 2008, "month": 6 },
+      "website": "",
+      "gpa": ""
+    }
+  ],
+  "volunteer": [],
+  "awards": [],
+  "languages": [
+    { "language": "English", "fluency": "fluent" },
+    { "language": "German", "fluency": "fluent" },
+    { "language": "Russian", "fluency": "native" }
+  ],
+  "interests": [
+    { "name": "Snowboarding, ", "keywords": [] },
+    { "name": "Bike", "keywords": [] }
+  ],
+  "references": [],
+  "certificates": [
+    {
+      "name": "New features and tools in MongoDB 3.6",
+      "issuer": "MongoDB University",
+      "date": "2018-04-01",
+      "url": "https://elmar.kenigs.de/assets/images/portfolio/M036_full.jpg",
+      "summary": "",
+      "fullDate": { "year": 2018, "month": 4, "day": null },
+      "website": "https://elmar.kenigs.de/assets/images/portfolio/M036_full.jpg"
+    },
+    {
+      "name": "MongoDB performance",
+      "issuer": "MongoDB University",
+      "date": "2017-07-01",
+      "url": "https://elmar.kenigs.de/assets/images/portfolio/M201_full.jpg",
+      "summary": "",
+      "fullDate": { "year": 2017, "month": 7, "day": null },
+      "website": "https://elmar.kenigs.de/assets/images/portfolio/M201_full.jpg"
+    },
+    {
+      "name": "MongoDB for Node.js Developers",
+      "issuer": "MongoDB University",
+      "date": "2016-03-01",
+      "url": "https://elmar.kenigs.de/assets/images/portfolio/M101_full.jpg",
+      "summary": "",
+      "fullDate": { "year": 2016, "month": 3, "day": null },
+      "website": "https://elmar.kenigs.de/assets/images/portfolio/M101_full.jpg"
+    }
+  ],
+  "meta": {
+    "note": "This is a combined version of the old and new JSON Resume API to provide maximum compatibility. You will notice duplicated values in different fields.",
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2020-12-29T15:53:00"
+  }
+}
