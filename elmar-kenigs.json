@@ -1,0 +1,509 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "https://storage.rxresu.me/cmf1enket8v2crxdfyjndvz5w/pictures/a6gpjyajrg1zecjmc8ae5ske.jpg",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Elmar Kenigs",
+    "headline": "Lead Software Engineer",
+    "email": "elmar.kenigs@gmail.com",
+    "phone": "",
+    "location": "Zurich, CH",
+    "website": {
+      "url": "",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Summary",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Lead Full‑Stack Engineer focused on decentralized web applications (dApps), with 10+ years building and scaling Node.js/TypeScript systems in production.&nbsp;Recently led the launch of Tanssi, Moonbeam, and DataHaven dApps, owning architecture and hands‑on implementation across frontend, backend, AWS infrastructure, and testing.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "rhu1ra2edjetq4zh5ym6ugh1",
+          "hidden": false,
+          "icon": "github",
+          "network": "GitHub",
+          "username": "ekenigs",
+          "website": {
+            "url": "https://github.com/ekenigs",
+            "label": ""
+          }
+        },
+        {
+          "id": "jvma49k55zea4jaeuvzam0e2",
+          "hidden": false,
+          "icon": "linkedin",
+          "network": "LinkedIn",
+          "username": "elmar-kenigs",
+          "website": {
+            "url": "https://www.linkedin.com/in/elmar-kenigs/",
+            "label": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "f6f1xt2rpi5045buwoe5kcoq",
+          "hidden": false,
+          "company": "OpsLayer, Inc.",
+          "position": "Lead Software Engineer",
+          "location": "Remote",
+          "period": "January 2025 - now",
+          "website": {
+            "url": "https://opslayer.com",
+            "label": ""
+          },
+          "description": "<ul><li><p>Led team of 7 engineers on Tanssi, DataHaven, and Glacis dApps, handling hiring (grew 3→7), task assignment, and mainnet launches from scratch.</p></li><li><p>Drove all technical decisions for the new DataHaven dApp, defining frontend architecture and integrations with Main Storage Provider backend services + DataHaven chain.</p></li><li><p>Owned end-to-end Tanssi dApp delivery, coordinating Next.js/Mantine frontend, backend, and AWS infrastructure.</p></li><li><p>Provided architecture guidance for Glacis projects (Scan App, Airlif API).</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nextjs.org\">Next.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://mantine.dev/\">Mantine</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://wagmi.sh/\">WAGMI</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://viem.sh/\">Viem</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.ethers.org/v5/\">Ethers.js</a> •</p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://polkadot.js.org/docs/\">PolkadotJS</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://playwright.dev\">Playwright</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://aws.amazon.com/\">AWS</a></p>",
+          "roles": []
+        },
+        {
+          "id": "q365bykblyvuxsa303hbq47n",
+          "hidden": false,
+          "company": "OpsLayer, Inc.",
+          "position": "Technical Lead",
+          "location": "Remote",
+          "period": "June 2023 - December 2024",
+          "website": {
+            "url": "https://opslayer.com",
+            "label": ""
+          },
+          "description": "<ul><li><p>Owned technical strategy for the Tanssi and Moonbeam dApps, including the architecture for XCM‑SDK cross‑chain interactions.</p></li><li><p>Mentored a team of 3 engineers on WAGMI, PolkadotJS integrations, and E2E testing (Playwright). Reviewed critical PRs before release.</p></li><li><p>Led Moonbeam frontend migration from Create React App to Next.js + AWS Amplify, improving performance and deployments.</p></li><li><p>Replaced Bulma with Mantine across both dApps, unifying UI components and simplifying maintenance.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nextjs.org\">Next.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://mantine.dev/\">Mantine</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://wagmi.sh/\">WAGMI</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://viem.sh/\">Viem</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://polkadot.js.org/docs/\">PolkadotJS</a> •</p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://playwright.dev\">Playwright</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://aws.amazon.com/\">AWS</a></p>",
+          "roles": []
+        },
+        {
+          "id": "lf3nrkaovzygekjwhlrnvn5q",
+          "hidden": false,
+          "company": "PureStake, Inc.",
+          "position": "Web3 Software Engineer",
+          "location": "Remote",
+          "period": "January 2022 - June 2023",
+          "website": {
+            "url": "https://purestake.com",
+            "label": ""
+          },
+          "description": "<ul><li><p>Built wallet connection and state management for v1 Moonbeam dApp using Ethers.js, handling multi-chain interactions across Moonbeam, Moonriver, and Moonbase Alpha.</p></li><li><p>Led frontend migration from Create React App to Next.js + AWS Amplify, improving build times, SEO, and deployment workflows.</p></li><li><p>Introduced Playwright E2E testing across Moonbeam dApp, catching regressions before releases and setting team testing standards.</p></li><li><p>Established core Web3 patterns (Ethers.js → WAGMI/PolkadotJS transition) continued in Moonbeam v2 development.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nextjs.org\">Next.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.ethers.org/v6/\">Ethers.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://polkadot.js.org/docs/\">PolkadotJS</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://playwright.dev\">Playwright</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://aws.amazon.com/\">AWS</a></p>",
+          "roles": []
+        },
+        {
+          "id": "trzkxhwgg2pzztkf1tu13dh2",
+          "hidden": false,
+          "company": "E-FARM.COM GmbH",
+          "position": "Full Stack Node.js Software Engineer (Contractor)",
+          "location": "Hamburg, Germany",
+          "period": "June 2021 - January 2022",
+          "website": {
+            "url": "https://e-farm.com",
+            "label": ""
+          },
+          "description": "<ul><li><p>Developed SmartTrade React Native app for machinery dealers to submit inventory through dynamic forms tied to sales workflows.</p></li><li><p>Built Nest.js backend services + MongoDB models to support diverse machinery data across web and mobile clients.</p></li><li><p>Connected React/React Native frontend to backend via shared schema sync, enabling auto‑generated dealer questionnaires.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nodejs.org\">Node.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://reactnative.dev\">React-Native</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://expo.dev\">Expo</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.serverless.com\">Serverless</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nestjs.com\">Nest.js</a> •</p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.mongodb.com\">MongoDB</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://aws.amazon.com/\">AWS</a></p>",
+          "roles": []
+        },
+        {
+          "id": "xnt9d7htemto8s1wtlt75rkx",
+          "hidden": false,
+          "company": "E-FARM.COM GmbH",
+          "position": "Backend Node.js Software Engineer (Contractor)",
+          "location": "Hamburg, Germany",
+          "period": "March 2020 - January 2021",
+          "website": {
+            "url": "https://e-farm.com",
+            "label": ""
+          },
+          "description": "<ul><li><p>Built multiple Node.js microservices with Nest.js + RabbitMQ event-driven architecture for machinery marketplace scalability.</p></li><li><p>Created data aggregation service generating PDF sales documents automatically from internal systems for sales team.</p></li><li><p>Developed microservice to push machinery listings to partner websites via 3rd-party APIs.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nodejs.org\">Node.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.serverless.com\">Serverless</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nestjs.com\">Nest.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.mongodb.com\">MongoDB</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.rabbitmq.com/\">RabbitMQ</a></p>",
+          "roles": []
+        },
+        {
+          "id": "fg0l0l424lef437xpk0hj4br",
+          "hidden": false,
+          "company": "Lokalportal GmbH",
+          "position": "React Frontend Engineer (Contractor)",
+          "location": "Hamburg, Germany",
+          "period": "August 2019 - March 2020",
+          "website": {
+            "url": "https://start.lokalportal.de",
+            "label": ""
+          },
+          "description": "<ul><li><p>Improved frontend business logic and state management for public news/community portal content display.</p></li><li><p>Migrated class-based React components to Hooks, improving code readability and maintenance.</p></li><li><p>Enhanced authentication layer with TypeScript + Cypress tests for better stability/security.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://redux.js.org/\">Redux</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.cypress.io\">Cypress</a></p>",
+          "roles": []
+        },
+        {
+          "id": "v0b6vvzblbg0j2xe6eyg279v",
+          "hidden": false,
+          "company": "Hermes Europe GmbH",
+          "position": "Lead Full-Stack Software Engineer",
+          "location": "Hamburg, Germany",
+          "period": "July 2018 - March 2019",
+          "website": {
+            "url": "https://www.hermesworld.com",
+            "label": ""
+          },
+          "description": "<ul><li><p>Promoted to Lead Engineer on new warehouse logistics project, owning technical architecture and daily team coordination for 5-7 engineers.</p></li><li><p>Hired and onboarded 5-7 engineers, building technical interviews and onboarding docs.</p></li><li><p>Built end-to-end parcel processing/tracking system: Node.js backend, React web app, React Native mobile, and Electron desktop app.</p></li><li><p>Delivered warehouse management tools with product team, enabling daily processing of thousands of international parcels.</p></li></ul><p><br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nodejs.org\">Node.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.mongodb.com\">MongoDB</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://reactnative.dev\">React-Native</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.electronjs.org\">Electron.js</a></p>",
+          "roles": []
+        },
+        {
+          "id": "x7ushh2j0fd90q5ekks2v7ra",
+          "hidden": false,
+          "company": "Hermes Europe GmbH",
+          "position": "Full-Stack Software Engineer",
+          "location": "Hamburg, Germany",
+          "period": "November 2015 - July 2018",
+          "website": {
+            "url": "https://www.hermesworld.com",
+            "label": ""
+          },
+          "description": "<ul><li><p>Built backend microservices (Node.js) and customer apps (Angular.js) for large-scale logistics platform.</p></li><li><p>Created public parcel tracking page end-to-end, used by thousands of end customers daily.</p></li><li><p>Developed full-stack label generation system processing thousands of international e-commerce parcels daily.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nodejs.org\">Node.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://angularjs.org\">Angular.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.mongodb.com\">MongoDB</a></p>",
+          "roles": []
+        },
+        {
+          "id": "de3l1438mbwmo5z0m9h2xhxb",
+          "hidden": false,
+          "company": "yansi GmbH",
+          "position": "Web Developer",
+          "location": "Frankfurt am Main, Germany",
+          "period": "December 2014 - October 2015",
+          "website": {
+            "url": "https://www.yasni.de",
+            "label": ""
+          },
+          "description": "<ul><li><p>Maintained and enhanced UI for high-traffic search engine using PHP + JavaScript.</p></li><li><p>Fixed production bugs across platform, improving stability for public users.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.php.net\">PHP</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript\">JavaScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://cordova.apache.org\">Apache Cordova</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.mysql.com\">MySQL</a></p>",
+          "roles": []
+        },
+        {
+          "id": "g3vdbvcdxzqdjd4i9l65z2ma",
+          "hidden": false,
+          "company": "Freelance",
+          "position": "Web Developer",
+          "location": "Frankfurt am Main, Germany",
+          "period": "January 2013 - November 2014",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Built custom WordPress sites for small businesses and entrepreneurs launching their first online presence.</p></li><li><p>Redesigned existing sites with PHP/JavaScript/Bootstrap to improve usability and appearance.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.php.net\">PHP</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://wordpress.com\">WordPress</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript\">JavaScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://jquery.com\">JQuery</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://getbootstrap.com\">Bootstrap</a></p>",
+          "roles": []
+        },
+        {
+          "id": "pwvqqomsf4ghffniop7r7jiq",
+          "hidden": false,
+          "company": "Agent Stick",
+          "position": "Mobile Game Developer",
+          "location": "Riga, Latvia",
+          "period": "August 2011 - February 2013",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Developed \"Agent Stick\" iOS game with Objective-C, Cocos2D, and Box2D physics.</p></li><li><p>Programmed core game logic, character animations, and unique on-screen drawing mechanic for physics interactions.</p></li><li><p>Launched game on App Store, reaching several hundred thousand downloads.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html\">Objective-C</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.cocos.com/en\">Cocos2D</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://box2d.org\">Box2D</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.autodesk.com/products/maya/overview\">Autodesk Maya</a></p>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "dyfqujieck66uhec3z109omt",
+          "hidden": false,
+          "school": "Riga Technical University",
+          "degree": "Bachelor of Engineering ",
+          "area": "Computer Science",
+          "grade": "",
+          "location": "",
+          "period": "September 2010 - July 2013 ",
+          "website": {
+            "url": "https://www.rtu.lv/en",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "tx93gzkm1f4kf9l4e1fv5ce8",
+          "hidden": false,
+          "icon": "",
+          "name": "Technical Leadership",
+          "proficiency": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "jcegcr8d1weblser63y816c2",
+          "hidden": false,
+          "icon": "",
+          "name": "System Architecture",
+          "proficiency": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "a3eojgm3yyo1v2zj6vhrv7lx",
+          "hidden": false,
+          "icon": "",
+          "name": "Web3 & Blockchain Development",
+          "proficiency": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "f8sv95kdvwv71nb4073cscxm",
+          "hidden": false,
+          "icon": "",
+          "name": "Node.js",
+          "proficiency": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "mt7tlga7dgwmgzukpsg9b974",
+          "hidden": false,
+          "icon": "",
+          "name": "TypeScript",
+          "proficiency": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "dugvxmkdwixup1bfp3p0tmww",
+          "hidden": false,
+          "icon": "",
+          "name": "React.js & Next.js",
+          "proficiency": "",
+          "level": 5,
+          "keywords": []
+        },
+        {
+          "id": "019d8bcd-7998-7399-b2f6-6f9e3c191dc6",
+          "hidden": false,
+          "icon": "acorn",
+          "name": "AI",
+          "proficiency": "",
+          "level": 4,
+          "keywords": []
+        },
+        {
+          "id": "j9phdk5e9mk6bjnnm30bi67i",
+          "hidden": false,
+          "icon": "",
+          "name": "Microservices",
+          "proficiency": "",
+          "level": 4,
+          "keywords": []
+        },
+        {
+          "id": "dogc2ijud0loh1hgnaubfs9f",
+          "hidden": false,
+          "icon": "",
+          "name": "CI/CD & Containerization (Docker)",
+          "proficiency": "",
+          "level": 4,
+          "keywords": []
+        },
+        {
+          "id": "y8s8qxtgp9pk7fq5ca5qj1db",
+          "hidden": false,
+          "icon": "",
+          "name": "Testing Strategies (Unit, E2E)",
+          "proficiency": "",
+          "level": 4,
+          "keywords": []
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "yb9u5xyeb9wexkx42snwblmw",
+          "hidden": false,
+          "language": "English",
+          "fluency": "",
+          "level": 4
+        },
+        {
+          "id": "h5qywiahhmneg78ukjtshba4",
+          "hidden": false,
+          "language": "German",
+          "fluency": "",
+          "level": 4
+        },
+        {
+          "id": "e8svj17k0juasefagagx5wgg",
+          "hidden": false,
+          "language": "Russian",
+          "fluency": "",
+          "level": 5
+        },
+        {
+          "id": "qgjxb7k5vcfftyxe2rzkpdik",
+          "hidden": false,
+          "language": "Latvian",
+          "fluency": "",
+          "level": 4
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "drkl5sni9dgwdc3a8vgnbdh4",
+          "hidden": false,
+          "icon": "",
+          "name": "Snowboarding",
+          "keywords": []
+        },
+        {
+          "id": "lf58cd9glw13chr8nlfrv1rv",
+          "hidden": false,
+          "icon": "",
+          "name": "Hiking",
+          "keywords": []
+        }
+      ]
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    }
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "gengar",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "summary",
+            "experience",
+            "education",
+            "projects",
+            "volunteer",
+            "references"
+          ],
+          "sidebar": [
+            "profiles",
+            "skills",
+            "interests",
+            "certifications",
+            "awards",
+            "publications",
+            "languages"
+          ]
+        }
+      ]
+    },
+    "css": {
+      "enabled": false,
+      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 18,
+      "marginY": 18,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(8, 145, 178, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "400",
+          "600"
+        ],
+        "fontSize": 10.5,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 13.5,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": ""
+  }
+}

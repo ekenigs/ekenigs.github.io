@@ -1,0 +1,29 @@
+{
+	"name": "kenigs.dev",
+	"type": "module",
+	"version": "0.0.1",
+	"engines": {
+		"node": ">=24.8.0"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"typecheck": "tsc --noEmit",
+		"check": "biome check .",
+		"format": "biome format --write ."
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^5.0.3",
+		"@tailwindcss/vite": "^4.2.2",
+		"@types/canvas-confetti": "^1.9.0",
+		"astro": "^6.1.6",
+		"canvas-confetti": "^1.9.4",
+		"tailwindcss": "^4.2.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.11",
+		"typescript": "^5.9.3"
+	}
+}

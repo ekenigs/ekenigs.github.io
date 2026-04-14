@@ -1,0 +1,26 @@
+---
+interface Props {
+	level: number;
+	max?: number;
+	label: string;
+}
+
+const { level, max = 5, label } = Astro.props;
+const safe = Math.min(Math.max(Math.round(level), 0), max);
+---
+
+<span class="sr-only">
+	{label}: {safe} out of {max}
+</span>
+<span class="inline-flex gap-1" role="img" aria-hidden="true">
+	{
+		Array.from({ length: max }, (_, i) => (
+			<span
+				class:list={[
+					'h-2 w-2 rounded-full',
+					i < safe ? 'bg-emerald-500/90' : 'bg-zinc-300 dark:bg-zinc-700',
+				]}
+			></span>
+		))
+	}
+</span>

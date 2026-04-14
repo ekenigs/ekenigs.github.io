@@ -1,0 +1,17 @@
+---
+import { resume } from '../../data/resume';
+import RichHtml from './RichHtml.astro';
+import Section from './Section.astro';
+import SectionHeading from './SectionHeading.astro';
+
+const { summary } = resume;
+---
+
+{
+	summary.hidden !== true && (
+		<Section id="summary">
+			<SectionHeading>{summary.title}</SectionHeading>
+			<RichHtml html={summary.content} />
+		</Section>
+	)
+}

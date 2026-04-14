@@ -1,0 +1,67 @@
+---
+---
+
+<button
+	type="button"
+	class="theme-toggle fixed z-50 flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-300 bg-white/90 text-zinc-700 shadow-sm backdrop-blur-sm transition hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:border-zinc-700 dark:bg-zinc-900/90 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:outline-emerald-500 max-[380px]:right-2 max-[380px]:top-2 right-[max(1rem,env(safe-area-inset-right))] top-[max(1rem,env(safe-area-inset-top))]"
+	aria-label="Switch to dark theme"
+	data-theme-toggle
+	data-theme="light"
+>
+	<!-- Moon: visible in light mode (switch to dark) -->
+	<svg
+		class="h-5 w-5 dark:hidden"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+		fill="currentColor"
+		aria-hidden="true"
+	>
+		<path
+			d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+		></path>
+	</svg>
+	<!-- Sun: visible in dark mode (switch to light) -->
+	<svg
+		class="hidden h-5 w-5 dark:block"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+		fill="currentColor"
+		aria-hidden="true"
+	>
+		<path
+			d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591z"
+		></path>
+	</svg>
+</button>
+
+<script>
+	const STORAGE_KEY = "theme";
+
+	function syncButtonLabel(root: HTMLElement, btn: HTMLButtonElement) {
+		const dark = root.classList.contains("dark");
+		btn.setAttribute("data-theme", dark ? "dark" : "light");
+		btn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+	}
+
+	function init() {
+		const root = document.documentElement;
+		const btn = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
+		if (!btn) return;
+
+		syncButtonLabel(root, btn);
+
+		btn.addEventListener("click", () => {
+			const nextDark = !root.classList.contains("dark");
+			root.classList.toggle("dark", nextDark);
+			try {
+				localStorage.setItem(STORAGE_KEY, nextDark ? "dark" : "light");
+			} catch {
+				/* private mode */
+			}
+			syncButtonLabel(root, btn);
+		});
+	}
+
+	init();
+	document.addEventListener("astro:after-swap", init);
+</script>

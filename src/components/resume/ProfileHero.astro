@@ -1,0 +1,55 @@
+---
+import { resume } from '../../data/resume';
+
+const { picture, basics } = resume;
+const showPicture = picture.hidden !== true && Boolean(picture.url?.trim());
+const email = basics.email?.trim();
+---
+
+<header class="relative overflow-hidden border-b border-zinc-200/90 dark:border-zinc-800/90">
+	<div
+		class="pointer-events-none absolute inset-0 opacity-25 [background-size:48px_48px] [background-image:linear-gradient(to_right,rgb(161_161_170/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(161_161_170/0.45)_1px,transparent_1px)] dark:opacity-35 dark:[background-image:linear-gradient(to_right,rgb(63_63_70/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(63_63_70/0.45)_1px,transparent_1px)]"
+		aria-hidden="true"
+	>
+	</div>
+	<div
+		class="relative mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-16 sm:px-6 sm:py-20 md:flex-row md:items-center md:gap-12 lg:px-8 lg:py-24"
+	>
+		{
+			showPicture && (
+				<img
+					src={picture.url}
+					width={256}
+					height={256}
+					alt={`Portrait of ${basics.name}`}
+					class="h-32 w-32 shrink-0 rounded-2xl object-cover ring-1 ring-zinc-300 shadow-xl shadow-zinc-900/10 dark:ring-zinc-700 dark:shadow-black/40 sm:h-40 sm:w-40"
+					loading="eager"
+					decoding="async"
+				/>
+			)
+		}
+		<div class="min-w-0 flex-1">
+			<h1 class="font-display text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl lg:text-5xl">
+				{basics.name}
+			</h1>
+			<p class="mt-3 text-lg font-medium text-emerald-700 dark:text-emerald-400/95 sm:text-xl">{basics.headline}</p>
+			<p class="mt-6 max-w-prose text-base leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-lg">
+				{basics.location}
+				{email && (
+					<>
+						{' '}
+						<span class="text-zinc-400 dark:text-zinc-600" aria-hidden="true">
+							·
+						</span>{' '}
+						<a
+							href={`mailto:${email}`}
+							class="text-emerald-700 underline decoration-emerald-600/40 underline-offset-4 transition hover:text-emerald-800 dark:text-emerald-400/95 dark:decoration-emerald-500/40 dark:hover:text-emerald-300"
+						>
+							{email}
+						</a>
+					</>
+				)}
+			</p>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,46 @@
+---
+import { type ResumeProjectItem, resume } from "../../data/resume";
+import { isSectionVisible, visibleItems } from "../../data/resume.utils";
+import RichHtml from "./RichHtml.astro";
+import Section from "./Section.astro";
+import SectionHeading from "./SectionHeading.astro";
+
+const section = resume.sections.projects;
+const items = visibleItems(section.items as ResumeProjectItem[]);
+---
+
+{
+	isSectionVisible(section) && items.length > 0 && (
+		<Section id="projects">
+			<SectionHeading>{section.title}</SectionHeading>
+			<ul class="space-y-8">
+				{items.map((project) => {
+					const url = project.website?.url?.trim();
+					return (
+						<li class="rounded-xl border border-zinc-200/90 bg-zinc-100/60 p-5 dark:border-zinc-800/80 dark:bg-zinc-900/40 sm:p-6">
+							<h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+								{url ? (
+									<a
+										href={url}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="text-inherit underline decoration-zinc-400 underline-offset-4 transition hover:text-emerald-800 hover:decoration-emerald-600/50 dark:decoration-zinc-600 dark:hover:text-emerald-300 dark:hover:decoration-emerald-500/50"
+									>
+										{project.name}
+									</a>
+								) : (
+									project.name
+								)}
+							</h3>
+							{project.description?.trim() && (
+								<div class="mt-3">
+									<RichHtml html={project.description} />
+								</div>
+							)}
+						</li>
+					);
+				})}
+			</ul>
+		</Section>
+	)
+}

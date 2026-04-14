@@ -1,0 +1,61 @@
+---
+import { resume } from '../../data/resume';
+import { isSectionVisible, visibleItems } from '../../data/resume.utils';
+import Section from './Section.astro';
+import SectionHeading from './SectionHeading.astro';
+
+const section = resume.sections.education;
+const items = visibleItems(section.items);
+---
+
+{
+	isSectionVisible(section) && items.length > 0 && (
+		<Section id="education">
+			<SectionHeading>{section.title}</SectionHeading>
+			<ul class="space-y-8">
+				{items.map((edu) => {
+					const schoolUrl = edu.website?.url?.trim();
+					const title = [edu.degree, edu.area].filter(Boolean).join(' — ');
+					return (
+						<li class="rounded-xl border border-zinc-200/90 bg-zinc-100/60 p-5 dark:border-zinc-800/80 dark:bg-zinc-900/40 sm:p-6">
+							<div class="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between">
+								<div>
+									<h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+										{schoolUrl ? (
+											<a
+												href={schoolUrl}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="text-inherit underline decoration-zinc-400 underline-offset-4 transition hover:text-emerald-800 hover:decoration-emerald-600/50 dark:decoration-zinc-600 dark:hover:text-emerald-300 dark:hover:decoration-emerald-500/50"
+											>
+												{edu.school}
+											</a>
+										) : (
+											edu.school
+										)}
+									</h3>
+									{title && <p class="mt-1 text-zinc-700 dark:text-zinc-300">{title}</p>}
+								</div>
+								<div class="text-sm text-zinc-500">
+									<time>{edu.period}</time>
+									{edu.location && (
+										<>
+											{' '}
+											<span class="text-zinc-400 dark:text-zinc-600" aria-hidden="true">
+												·
+											</span>{' '}
+											<span>{edu.location}</span>
+										</>
+									)}
+								</div>
+							</div>
+							{edu.description?.trim() && (
+								<p class="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{edu.description}</p>
+							)}
+						</li>
+					);
+				})}
+			</ul>
+		</Section>
+	)
+}

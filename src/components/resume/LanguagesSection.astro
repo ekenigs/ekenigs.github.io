@@ -1,0 +1,26 @@
+---
+import { resume } from '../../data/resume';
+import { isSectionVisible, visibleItems } from '../../data/resume.utils';
+import LevelDots from './LevelDots.astro';
+import Section from './Section.astro';
+import SectionHeading from './SectionHeading.astro';
+
+const section = resume.sections.languages;
+const items = visibleItems(section.items);
+---
+
+{
+	isSectionVisible(section) && items.length > 0 && (
+		<Section id="languages">
+			<SectionHeading>{section.title}</SectionHeading>
+			<ul class="space-y-3">
+				{items.map((row) => (
+					<li class="flex min-h-12 flex-wrap items-center justify-between gap-3 rounded-lg border border-zinc-200/90 bg-white/70 px-4 py-3 dark:border-zinc-800/90 dark:bg-zinc-900/35">
+						<span class="text-sm font-medium text-zinc-800 dark:text-zinc-200">{row.language}</span>
+						<LevelDots level={row.level} label={row.language} />
+					</li>
+				))}
+			</ul>
+		</Section>
+	)
+}
