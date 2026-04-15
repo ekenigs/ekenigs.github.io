@@ -3,6 +3,7 @@ import EducationSection from '../components/resume/EducationSection.astro';
 import ExperienceSection from '../components/resume/ExperienceSection.astro';
 import InterestsSection from '../components/resume/InterestsSection.astro';
 import LanguagesSection from '../components/resume/LanguagesSection.astro';
+import PortfolioSection from '../components/resume/PortfolioSection.astro';
 import ProfileHero from '../components/resume/ProfileHero.astro';
 import ProjectsSection from '../components/resume/ProjectsSection.astro';
 import SkillsSection from '../components/resume/SkillsSection.astro';
@@ -23,6 +24,7 @@ const metaDescription = stripHtml(resume.summary.content).slice(0, 160);
 		<EducationSection />
 		<ProjectsSection />
 		<SkillsSection />
+		<PortfolioSection />
 		<LanguagesSection />
 		<InterestsSection />
 	</main>
