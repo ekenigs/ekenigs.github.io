@@ -1,0 +1,18 @@
+# Elmar Kenigs — personal site
+
+> Online resume for Elmar Kenigs, Lead Software Engineer (full-stack, decentralized web / dApps).
+
+## Canonical URL
+
+- https://ekenigs.github.io/
+
+## What is here
+
+- Single-page resume: summary, experience, education, projects, skills, portfolio, languages, interests.
+- Source of truth for biographical and professional details is the HTML page at the URL above.
+
+## For automated tools
+
+- Prefer fetching `https://ekenigs.github.io/` for up-to-date content.
+- Machine-readable sitemap: `https://ekenigs.github.io/sitemap-index.xml`
+- Crawl policy: `https://ekenigs.github.io/robots.txt`

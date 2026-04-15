@@ -6,12 +6,16 @@ type LayoutProps = {
 	title?: string;
 	description?: string;
 	content?: { title?: string };
+	ogImageUrl?: string;
+	jsonLd?: Record<string, unknown>;
 };
 
-const { title: titleProp, description, content } = Astro.props as LayoutProps;
+const { title: titleProp, description, content, ogImageUrl, jsonLd } = Astro.props as LayoutProps;
 
 const pageTitle = titleProp ?? content?.title ?? 'Elmar Kenigs';
 const metaDescription = description?.trim() ?? '';
+const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
+const absolutePageUrl = canonicalURL.href;
 ---
 
 <!doctype html>
@@ -35,8 +39,22 @@ const metaDescription = description?.trim() ?? '';
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		{metaDescription && <meta name="description" content={metaDescription} />}
+		<link rel="canonical" href={absolutePageUrl} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={pageTitle} />
+		{metaDescription && <meta property="og:description" content={metaDescription} />}
+		<meta property="og:url" content={absolutePageUrl} />
+		<meta property="og:site_name" content="Elmar Kenigs" />
+		{ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+		<meta name="twitter:card" content={ogImageUrl ? 'summary_large_image' : 'summary'} />
+		<meta name="twitter:title" content={pageTitle} />
+		{metaDescription && <meta name="twitter:description" content={metaDescription} />}
+		{ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{pageTitle}</title>
+		{jsonLd && (
+			<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+		)}
 	</head>
 	<body class="min-h-dvh">
 		<ThemeToggle />

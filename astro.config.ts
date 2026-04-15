@@ -1,7 +1,10 @@
-// @ts-check
-
+import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
+import type { PluginOption } from "vite";
+
+/** GitHub Pages URL for this repo; update if you add a custom domain. */
+const site = "https://ekenigs.github.io";
 
 /** Dev server needs relaxed CSP so Vite HMR (eval/WS) keeps working. */
 const isDev = process.env.NODE_ENV !== "production";
@@ -19,8 +22,10 @@ const securityHeaders = {
 
 // https://astro.build/config
 export default defineConfig({
+	site,
+	integrations: [sitemap()],
 	vite: {
-		plugins: [tailwindcss()],
+		plugins: [tailwindcss() as PluginOption],
 		server: {
 			headers: securityHeaders,
 		},
