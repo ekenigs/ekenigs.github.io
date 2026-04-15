@@ -1,13 +1,9 @@
-# Astro with Tailwind
+## Deploying to GitHub Pages
 
-```sh
-pnpm create astro@latest -- --template with-tailwindcss
-```
+Deployment uses the **same repository** as the source: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) checks out this repo, runs `pnpm build`, and publishes the build output to GitHub Pages for [`ekenigs/ekenigs.github.io`](https://github.com/ekenigs/ekenigs.github.io). You do not need a separate deploy-only repository.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+**Live site:** [https://ekenigs.github.io/](https://ekenigs.github.io/) — a repo named `username.github.io` is a [user site](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites), served at the site root (not under `/repo-name`).
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+**Repository setup (once):** In GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions**.
 
-For complete setup instructions, please see our [Tailwind Styling Guide](https://docs.astro.build/en/guides/styling/#tailwind).
+**Custom domain (optional):** Add `public/CNAME`, configure DNS, set `site` in `astro.config.ts`, and remove `base` if you had one — see [Change your GitHub URL to a custom domain](https://docs.astro.build/en/guides/deploy/github/#change-your-github-url-to-a-custom-domain) in the Astro docs.
