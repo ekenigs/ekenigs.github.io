@@ -38,14 +38,14 @@ const items = visibleItems(section.items);
 											job.company
 										)}
 									</h3>
-									<p class="text-base font-medium text-emerald-700 dark:text-emerald-400/90">{job.position}</p>
+									<p class="text-base font-medium text-emerald-700 dark:text-emerald-400">{job.position}</p>
 								</div>
-								<div class="text-sm text-zinc-500">
+								<div class="text-sm text-zinc-600 dark:text-zinc-400">
 									<time>{job.period}</time>
 									{job.location && (
 										<>
 											{' '}
-											<span class="text-zinc-400 dark:text-zinc-600" aria-hidden="true">
+											<span class="text-zinc-400 dark:text-zinc-500" aria-hidden="true">
 												·
 											</span>{' '}
 											<span>{job.location}</span>

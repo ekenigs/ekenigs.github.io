@@ -1,10 +1,14 @@
 ---
+import { Picture } from 'astro:assets';
 import { resume } from '../../data/resume';
 import { visibleItems } from '../../data/resume.utils';
 import ContactActions from './ContactActions.astro';
+import profilePhoto320 from '../../assets/profile/photo-320.jpg';
 
 const { picture, basics } = resume;
 const showPicture = picture.hidden !== true && Boolean(picture.url?.trim());
+const profileUrl = picture.url?.trim() ?? '';
+const isLocalProfilePhoto = profileUrl.startsWith('/profile/');
 const profileLinks = visibleItems(resume.sections.profiles.items).flatMap((item) => {
 	const href = item.website?.url?.trim();
 	if (!href) return [];
@@ -21,6 +25,9 @@ const githubProfile =
 	profileLinks.find((link) => link.icon.includes('github') || link.label.toLowerCase().includes('github')) ?? null;
 const linkedinProfile =
 	profileLinks.find((link) => link.icon.includes('linkedin') || link.label.toLowerCase().includes('linkedin')) ?? null;
+
+const profileImgClass =
+	'h-32 w-32 shrink-0 rounded-full object-cover ring-1 ring-zinc-300 shadow-xl shadow-zinc-900/10 dark:ring-zinc-700 dark:shadow-black/40 sm:h-40 sm:w-40';
 ---
 
 <header class="relative overflow-hidden">
@@ -33,15 +40,33 @@ const linkedinProfile =
 		class="relative mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-start lg:gap-8 lg:px-8 lg:py-14"
 	>
 		{
-			showPicture && (
-				<img
-					src={picture.url}
-					width={256}
-					height={256}
+			showPicture && isLocalProfilePhoto && (
+				<Picture
+					src={profilePhoto320}
 					alt={`Portrait of ${basics.name}`}
-					class="h-32 w-32 shrink-0 rounded-full object-cover ring-1 ring-zinc-300 shadow-xl shadow-zinc-900/10 dark:ring-zinc-700 dark:shadow-black/40 sm:h-40 sm:w-40"
+					formats={['avif', 'webp']}
+					width={160}
+					height={160}
+					widths={[256, 320]}
+					sizes="(max-width: 639px) 128px, 160px"
 					loading="eager"
 					decoding="async"
+					fetchpriority="high"
+					class={profileImgClass}
+				/>
+			)
+		}
+		{
+			showPicture && !isLocalProfilePhoto && profileUrl && (
+				<img
+					src={profileUrl}
+					width={160}
+					height={160}
+					alt={`Portrait of ${basics.name}`}
+					class={profileImgClass}
+					loading="eager"
+					decoding="async"
+					fetchpriority="high"
 				/>
 			)
 		}
@@ -49,7 +74,7 @@ const linkedinProfile =
 			<h1 class="font-display text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl lg:text-5xl">
 				{basics.name}
 			</h1>
-			<p class="mt-3 text-lg font-medium text-emerald-700 dark:text-emerald-400/95 sm:text-xl">{basics.headline}</p>
+			<p class="mt-3 text-lg font-medium text-emerald-700 dark:text-emerald-400 sm:text-xl">{basics.headline}</p>
 			<ContactActions
 				location={basics.location}
 				email={basics.email}

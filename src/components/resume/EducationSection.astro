@@ -36,12 +36,12 @@ const items = visibleItems(section.items);
 									</h3>
 									{title && <p class="mt-1 text-zinc-700 dark:text-zinc-300">{title}</p>}
 								</div>
-								<div class="text-sm text-zinc-500">
+								<div class="text-sm text-zinc-600 dark:text-zinc-400">
 									<time>{edu.period}</time>
 									{edu.location && (
 										<>
 											{' '}
-											<span class="text-zinc-400 dark:text-zinc-600" aria-hidden="true">
+											<span class="text-zinc-400 dark:text-zinc-500" aria-hidden="true">
 												·
 											</span>{' '}
 											<span>{edu.location}</span>
@@ -50,7 +50,7 @@ const items = visibleItems(section.items);
 								</div>
 							</div>
 							{edu.description?.trim() && (
-								<p class="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{edu.description}</p>
+								<p class="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">{edu.description}</p>
 							)}
 						</li>
 					);
