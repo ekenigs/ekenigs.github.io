@@ -1,19 +1,36 @@
 ---
 import { resume } from '../../data/resume';
+import { visibleItems } from '../../data/resume.utils';
+import ContactActions from './ContactActions.astro';
 
 const { picture, basics } = resume;
 const showPicture = picture.hidden !== true && Boolean(picture.url?.trim());
-const email = basics.email?.trim();
+const profileLinks = visibleItems(resume.sections.profiles.items).flatMap((item) => {
+	const href = item.website?.url?.trim();
+	if (!href) return [];
+	return [
+		{
+			href,
+			label: item.network || item.username || href,
+			icon: (item.icon || item.network || '').toLowerCase(),
+		},
+	];
+});
+
+const githubProfile =
+	profileLinks.find((link) => link.icon.includes('github') || link.label.toLowerCase().includes('github')) ?? null;
+const linkedinProfile =
+	profileLinks.find((link) => link.icon.includes('linkedin') || link.label.toLowerCase().includes('linkedin')) ?? null;
 ---
 
-<header class="relative overflow-hidden border-b border-zinc-200/90 dark:border-zinc-800/90">
+<header class="relative overflow-hidden">
 	<div
-		class="pointer-events-none absolute inset-0 opacity-25 [background-size:48px_48px] [background-image:linear-gradient(to_right,rgb(161_161_170/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(161_161_170/0.45)_1px,transparent_1px)] dark:opacity-35 dark:[background-image:linear-gradient(to_right,rgb(63_63_70/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(63_63_70/0.45)_1px,transparent_1px)]"
+		class="pointer-events-none absolute inset-0 opacity-25 bg-size-[48px_48px] [background-image:linear-gradient(to_right,rgb(161_161_170/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(161_161_170/0.45)_1px,transparent_1px)] dark:opacity-35 dark:[background-image:linear-gradient(to_right,rgb(63_63_70/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(63_63_70/0.45)_1px,transparent_1px)]"
 		aria-hidden="true"
 	>
 	</div>
 	<div
-		class="relative mx-auto flex w-full max-w-3xl flex-col gap-8 px-4 py-16 sm:px-6 sm:py-20 md:flex-row md:items-center md:gap-12 lg:px-8 lg:py-24"
+		class="relative mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-start lg:gap-8 lg:px-8 lg:py-14"
 	>
 		{
 			showPicture && (
@@ -33,23 +50,12 @@ const email = basics.email?.trim();
 				{basics.name}
 			</h1>
 			<p class="mt-3 text-lg font-medium text-emerald-700 dark:text-emerald-400/95 sm:text-xl">{basics.headline}</p>
-			<p class="mt-6 max-w-prose text-base leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-lg">
-				{basics.location}
-				{email && (
-					<>
-						{' '}
-						<span class="text-zinc-400 dark:text-zinc-600" aria-hidden="true">
-							·
-						</span>{' '}
-						<a
-							href={`mailto:${email}`}
-							class="text-emerald-700 underline decoration-emerald-600/40 underline-offset-4 transition hover:text-emerald-800 dark:text-emerald-400/95 dark:decoration-emerald-500/40 dark:hover:text-emerald-300"
-						>
-							{email}
-						</a>
-					</>
-				)}
-			</p>
+			<ContactActions
+				location={basics.location}
+				email={basics.email}
+				linkedin={linkedinProfile}
+				github={githubProfile}
+			/>
 		</div>
 	</div>
 </header>

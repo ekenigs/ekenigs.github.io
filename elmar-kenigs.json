@@ -38,7 +38,10 @@
         {
           "id": "rhu1ra2edjetq4zh5ym6ugh1",
           "hidden": false,
-          "icon": "github",
+          "options": {
+            "showLinkInTitle": false
+          },
+          "icon": "github-logo",
           "network": "GitHub",
           "username": "ekenigs",
           "website": {
@@ -49,7 +52,10 @@
         {
           "id": "jvma49k55zea4jaeuvzam0e2",
           "hidden": false,
-          "icon": "linkedin",
+          "options": {
+            "showLinkInTitle": false
+          },
+          "icon": "linkedin-logo",
           "network": "LinkedIn",
           "username": "elmar-kenigs",
           "website": {
@@ -275,7 +281,7 @@
           "id": "a3eojgm3yyo1v2zj6vhrv7lx",
           "hidden": false,
           "icon": "",
-          "name": "Web3 & Blockchain Development",
+          "name": "Web3 Development",
           "proficiency": "",
           "level": 5,
           "keywords": []
@@ -310,7 +316,7 @@
         {
           "id": "019d8bcd-7998-7399-b2f6-6f9e3c191dc6",
           "hidden": false,
-          "icon": "acorn",
+          "icon": "",
           "name": "AI",
           "proficiency": "",
           "level": 4,
@@ -398,6 +404,13 @@
           "icon": "",
           "name": "Hiking",
           "keywords": []
+        },
+        {
+          "id": "019d8cb6-501e-76b2-ba75-83ec9050909f",
+          "hidden": false,
+          "icon": "",
+          "name": "Kitesurfing",
+          "keywords": []
         }
       ]
     },
@@ -446,16 +459,16 @@
             "education",
             "projects",
             "volunteer",
-            "references"
+            "references",
+            "certifications",
+            "awards",
+            "publications"
           ],
           "sidebar": [
             "profiles",
             "skills",
-            "interests",
-            "certifications",
-            "awards",
-            "publications",
-            "languages"
+            "languages",
+            "interests"
           ]
         }
       ]

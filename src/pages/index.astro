@@ -4,7 +4,6 @@ import ExperienceSection from '../components/resume/ExperienceSection.astro';
 import InterestsSection from '../components/resume/InterestsSection.astro';
 import LanguagesSection from '../components/resume/LanguagesSection.astro';
 import ProfileHero from '../components/resume/ProfileHero.astro';
-import ProfilesSection from '../components/resume/ProfilesSection.astro';
 import ProjectsSection from '../components/resume/ProjectsSection.astro';
 import SkillsSection from '../components/resume/SkillsSection.astro';
 import SummarySection from '../components/resume/SummarySection.astro';
@@ -20,7 +19,6 @@ const metaDescription = stripHtml(resume.summary.content).slice(0, 160);
 	<main>
 		<ProfileHero />
 		<SummarySection />
-		<ProfilesSection />
 		<ExperienceSection />
 		<EducationSection />
 		<ProjectsSection />
@@ -28,7 +26,7 @@ const metaDescription = stripHtml(resume.summary.content).slice(0, 160);
 		<LanguagesSection />
 		<InterestsSection />
 	</main>
-	<footer class="border-t border-zinc-200/90 py-10 text-center text-sm text-zinc-500 dark:border-zinc-800/90">
+	<footer class="py-10 text-center text-sm text-zinc-500">
 		<p>
 			© {new Date().getFullYear()} {resume.basics.name}. Built with Astro & Tailwind CSS.
 		</p>
