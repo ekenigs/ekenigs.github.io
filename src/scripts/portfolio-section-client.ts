@@ -9,25 +9,27 @@ function initCarousel(item: HTMLElement): void {
 	const next = item.querySelector<HTMLButtonElement>("[data-carousel-next]");
 	if (!track || !prev || !next) return;
 
+	const carousel = track;
+
 	const edgeEps = 2;
 
 	function goNext(): void {
-		const step = getCarouselStep(track);
-		const maxScroll = track.scrollWidth - track.clientWidth;
-		if (track.scrollLeft >= maxScroll - edgeEps) {
-			track.scrollTo({ left: 0, behavior: "smooth" });
+		const step = getCarouselStep(carousel);
+		const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+		if (carousel.scrollLeft >= maxScroll - edgeEps) {
+			carousel.scrollTo({ left: 0, behavior: "smooth" });
 		} else {
-			track.scrollBy({ left: step, behavior: "smooth" });
+			carousel.scrollBy({ left: step, behavior: "smooth" });
 		}
 	}
 
 	function goPrev(): void {
-		const step = getCarouselStep(track);
-		const maxScroll = track.scrollWidth - track.clientWidth;
-		if (track.scrollLeft <= edgeEps) {
-			track.scrollTo({ left: maxScroll, behavior: "smooth" });
+		const step = getCarouselStep(carousel);
+		const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+		if (carousel.scrollLeft <= edgeEps) {
+			carousel.scrollTo({ left: maxScroll, behavior: "smooth" });
 		} else {
-			track.scrollBy({ left: -step, behavior: "smooth" });
+			carousel.scrollBy({ left: -step, behavior: "smooth" });
 		}
 	}
 
