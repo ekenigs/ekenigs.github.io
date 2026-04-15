@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 import type { PluginOption } from "vite";
 
 /** GitHub Pages URL for this repo; update if you add a custom domain. */
-const site = "https://ekenigs.github.io";
+const site = "https://kenigs.dev";
 
 /** Dev server needs relaxed CSP so Vite HMR (eval/WS) keeps working. */
 const isDev = process.env.NODE_ENV !== "production";
