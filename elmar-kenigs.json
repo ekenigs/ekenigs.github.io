@@ -1,7 +1,7 @@
 {
   "picture": {
     "hidden": false,
-    "url": "/profile/photo-320.jpg",
+    "url": "https://storage.rxresu.me/cmf1enket8v2crxdfyjndvz5w/pictures/a6gpjyajrg1zecjmc8ae5ske.jpg",
     "size": 64,
     "rotation": 0,
     "aspectRatio": 1,
@@ -18,7 +18,7 @@
     "phone": "",
     "location": "Zurich, CH",
     "website": {
-      "url": "",
+      "url": "https://kenigs.dev",
       "label": ""
     },
     "customFields": []
@@ -81,7 +81,7 @@
             "url": "https://opslayer.com",
             "label": ""
           },
-          "description": "<ul><li><p>Led team of 7 engineers on Tanssi, DataHaven, and Glacis dApps, handling hiring (grew 3→7), task assignment, and mainnet launches from scratch.</p></li><li><p>Drove all technical decisions for the new DataHaven dApp, defining frontend architecture and integrations with Main Storage Provider backend services + DataHaven chain.</p></li><li><p>Owned end-to-end Tanssi dApp delivery, coordinating Next.js/Mantine frontend, backend, and AWS infrastructure.</p></li><li><p>Provided architecture guidance for Glacis projects (Scan App, Airlif API).</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nextjs.org\">Next.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://mantine.dev/\">Mantine</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://wagmi.sh/\">WAGMI</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://viem.sh/\">Viem</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.ethers.org/v5/\">Ethers.js v5</a> •</p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://polkadot.js.org/docs/\">PolkadotJS</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://playwright.dev\">Playwright</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://aws.amazon.com/\">AWS</a></p>",
+          "description": "<ul><li><p>Led team of 7 engineers on Tanssi, DataHaven, and Glacis dApps, handling hiring (grew 3→7), task assignment, and mainnet launches from scratch.</p></li><li><p>Drove all technical decisions for the new DataHaven dApp, defining frontend architecture and integrations with Main Storage Provider backend services + DataHaven chain.</p></li><li><p>Owned end-to-end Tanssi dApp delivery, coordinating Next.js/Mantine frontend, backend, and AWS infrastructure.</p></li><li><p>Provided architecture guidance for Glacis projects (Scan App, Airlif API).</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nextjs.org\">Next.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://mantine.dev/\">Mantine</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://wagmi.sh/\">WAGMI</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://viem.sh/\">Viem</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.ethers.org/v5/\">Ethers.js</a> •</p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://polkadot.js.org/docs/\">PolkadotJS</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://playwright.dev\">Playwright</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://aws.amazon.com/\">AWS</a></p>",
           "roles": []
         },
         {
@@ -109,7 +109,7 @@
             "url": "https://purestake.com",
             "label": ""
           },
-          "description": "<ul><li><p>Built wallet connection and state management for v1 Moonbeam dApp using Ethers.js, handling multi-chain interactions across Moonbeam, Moonriver, and Moonbase Alpha.</p></li><li><p>Led frontend migration from Create React App to Next.js + AWS Amplify, improving build times, SEO, and deployment workflows.</p></li><li><p>Introduced Playwright E2E testing across Moonbeam dApp, catching regressions before releases and setting team testing standards.</p></li><li><p>Established core Web3 patterns (Ethers.js → WAGMI/PolkadotJS transition) continued in Moonbeam v2 development.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nextjs.org\">Next.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.ethers.org/v6/\">Ethers.js v6</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://polkadot.js.org/docs/\">PolkadotJS</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://playwright.dev\">Playwright</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://aws.amazon.com/\">AWS</a></p>",
+          "description": "<ul><li><p>Built wallet connection and state management for v1 Moonbeam dApp using Ethers.js, handling multi-chain interactions across Moonbeam, Moonriver, and Moonbase Alpha.</p></li><li><p>Led frontend migration from Create React App to Next.js + AWS Amplify, improving build times, SEO, and deployment workflows.</p></li><li><p>Introduced Playwright E2E testing across Moonbeam dApp, catching regressions before releases and setting team testing standards.</p></li><li><p>Established core Web3 patterns (Ethers.js → WAGMI/PolkadotJS transition) continued in Moonbeam v2 development.</p></li></ul><p></p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.typescriptlang.org\">TypeScript</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://react.dev\">React</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://nextjs.org\">Next.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.ethers.org/v6/\">Ethers.js</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://polkadot.js.org/docs/\">PolkadotJS</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://playwright.dev\">Playwright</a> • <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://aws.amazon.com/\">AWS</a></p>",
           "roles": []
         },
         {
@@ -394,22 +394,29 @@
         {
           "id": "drkl5sni9dgwdc3a8vgnbdh4",
           "hidden": false,
-          "icon": "",
+          "icon": "person-simple-snowboard",
           "name": "Snowboarding",
           "keywords": []
         },
         {
           "id": "lf58cd9glw13chr8nlfrv1rv",
           "hidden": false,
-          "icon": "",
+          "icon": "person-simple-walk",
           "name": "Hiking",
           "keywords": []
         },
         {
           "id": "019d8cb6-501e-76b2-ba75-83ec9050909f",
           "hidden": false,
-          "icon": "",
+          "icon": "waves",
           "name": "Kitesurfing",
+          "keywords": []
+        },
+        {
+          "id": "019d962c-8fec-77a5-8496-da7e8608e9e8",
+          "hidden": false,
+          "icon": "coffee",
+          "name": "Coffee",
           "keywords": []
         }
       ]
