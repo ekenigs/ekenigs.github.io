@@ -16,6 +16,7 @@ const pageTitle = titleProp ?? content?.title ?? 'Elmar Kenigs';
 const metaDescription = description?.trim() ?? '';
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
 const absolutePageUrl = canonicalURL.href;
+const isProduction = import.meta.env.PROD;
 ---
 
 <!doctype html>
@@ -54,6 +55,9 @@ const absolutePageUrl = canonicalURL.href;
 		<title>{pageTitle}</title>
 		{jsonLd && (
 			<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+		)}
+		{isProduction && (
+			<script defer src="https://cloud.umami.is/script.js" data-website-id="e7ca7814-6665-47a0-a924-00ea0476fd36"></script>
 		)}
 	</head>
 	<body class="min-h-dvh">
