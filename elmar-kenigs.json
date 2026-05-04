@@ -1,7 +1,7 @@
 {
   "picture": {
     "hidden": false,
-    "url": "https://storage.rxresu.me/cmf1enket8v2crxdfyjndvz5w/pictures/a6gpjyajrg1zecjmc8ae5ske.jpg",
+    "url": "",
     "size": 64,
     "rotation": 0,
     "aspectRatio": 1,
@@ -42,6 +42,7 @@
             "showLinkInTitle": false
           },
           "icon": "github-logo",
+          "iconColor": "",
           "network": "GitHub",
           "username": "ekenigs",
           "website": {
@@ -56,6 +57,7 @@
             "showLinkInTitle": false
           },
           "icon": "linkedin-logo",
+          "iconColor": "",
           "network": "LinkedIn",
           "username": "elmar-kenigs",
           "website": {
@@ -185,7 +187,10 @@
         {
           "id": "de3l1438mbwmo5z0m9h2xhxb",
           "hidden": false,
-          "company": "yansi GmbH",
+          "options": {
+            "showLinkInTitle": false
+          },
+          "company": "yasni GmbH",
           "position": "Web Developer",
           "location": "Frankfurt am Main, Germany",
           "period": "December 2014 - October 2015",
@@ -263,6 +268,7 @@
           "id": "tx93gzkm1f4kf9l4e1fv5ce8",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "Technical Leadership",
           "proficiency": "",
           "level": 5,
@@ -272,6 +278,7 @@
           "id": "jcegcr8d1weblser63y816c2",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "System Architecture",
           "proficiency": "",
           "level": 5,
@@ -281,6 +288,7 @@
           "id": "a3eojgm3yyo1v2zj6vhrv7lx",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "Web3 Development",
           "proficiency": "",
           "level": 5,
@@ -290,6 +298,7 @@
           "id": "f8sv95kdvwv71nb4073cscxm",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "Node.js",
           "proficiency": "",
           "level": 5,
@@ -299,6 +308,7 @@
           "id": "mt7tlga7dgwmgzukpsg9b974",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "TypeScript",
           "proficiency": "",
           "level": 5,
@@ -308,15 +318,37 @@
           "id": "dugvxmkdwixup1bfp3p0tmww",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "React.js & Next.js",
           "proficiency": "",
           "level": 5,
           "keywords": []
         },
         {
+          "id": "019dc431-81a2-77d5-84a6-380131eb626a",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "MongoDB",
+          "proficiency": "",
+          "level": 4,
+          "keywords": []
+        },
+        {
+          "id": "019dc432-2be2-73be-9858-8750552ed422",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "PostgreSQL",
+          "proficiency": "",
+          "level": 3,
+          "keywords": []
+        },
+        {
           "id": "019d8bcd-7998-7399-b2f6-6f9e3c191dc6",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "AI",
           "proficiency": "",
           "level": 4,
@@ -326,6 +358,7 @@
           "id": "j9phdk5e9mk6bjnnm30bi67i",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "Microservices",
           "proficiency": "",
           "level": 4,
@@ -335,6 +368,7 @@
           "id": "dogc2ijud0loh1hgnaubfs9f",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "CI/CD & Containerization (Docker)",
           "proficiency": "",
           "level": 4,
@@ -344,6 +378,7 @@
           "id": "y8s8qxtgp9pk7fq5ca5qj1db",
           "hidden": false,
           "icon": "",
+          "iconColor": "",
           "name": "Testing Strategies (Unit, E2E)",
           "proficiency": "",
           "level": 4,
@@ -395,6 +430,7 @@
           "id": "drkl5sni9dgwdc3a8vgnbdh4",
           "hidden": false,
           "icon": "person-simple-snowboard",
+          "iconColor": "",
           "name": "Snowboarding",
           "keywords": []
         },
@@ -402,6 +438,7 @@
           "id": "lf58cd9glw13chr8nlfrv1rv",
           "hidden": false,
           "icon": "person-simple-walk",
+          "iconColor": "",
           "name": "Hiking",
           "keywords": []
         },
@@ -409,6 +446,7 @@
           "id": "019d8cb6-501e-76b2-ba75-83ec9050909f",
           "hidden": false,
           "icon": "waves",
+          "iconColor": "",
           "name": "Kitesurfing",
           "keywords": []
         },
@@ -416,6 +454,7 @@
           "id": "019d962c-8fec-77a5-8496-da7e8608e9e8",
           "hidden": false,
           "icon": "coffee",
+          "iconColor": "",
           "name": "Coffee",
           "keywords": []
         }
@@ -489,7 +528,7 @@
       "gapY": 6,
       "marginX": 18,
       "marginY": 18,
-      "format": "a4",
+      "format": "free-form",
       "locale": "en-US",
       "hideIcons": false
     },
