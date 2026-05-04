@@ -1,7 +1,6 @@
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
-import type { PluginOption } from "vite";
 
 /** GitHub Pages URL for this repo; update if you add a custom domain. */
 const site = "https://kenigs.dev";
@@ -25,7 +24,7 @@ export default defineConfig({
 	site,
 	integrations: [sitemap()],
 	vite: {
-		plugins: [tailwindcss() as PluginOption],
+		plugins: [...tailwindcss()],
 		server: {
 			headers: securityHeaders,
 		},

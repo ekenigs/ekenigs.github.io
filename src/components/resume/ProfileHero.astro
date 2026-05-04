@@ -1,14 +1,9 @@
 ---
-import { Picture } from 'astro:assets';
 import { resume } from '../../data/resume';
 import { visibleItems } from '../../data/resume.utils';
 import ContactActions from './ContactActions.astro';
-import profilePhoto320 from '../../assets/profile/photo-320.jpg';
 
-const { picture, basics } = resume;
-const showPicture = picture.hidden !== true && Boolean(picture.url?.trim());
-const profileUrl = picture.url?.trim() ?? '';
-const isLocalProfilePhoto = profileUrl.startsWith('/profile/');
+const { basics } = resume;
 const profileLinks = visibleItems(resume.sections.profiles.items).flatMap((item) => {
 	const href = item.website?.url?.trim();
 	if (!href) return [];
@@ -39,37 +34,15 @@ const profileImgClass =
 	<div
 		class="relative mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-start lg:gap-8 lg:px-8 lg:py-14"
 	>
-		{
-			showPicture && isLocalProfilePhoto && (
-				<Picture
-					src={profilePhoto320}
-					alt={`Portrait of ${basics.name}`}
-					formats={['avif', 'webp']}
-					width={160}
-					height={160}
-					widths={[256, 320]}
-					sizes="(max-width: 639px) 128px, 160px"
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-					class={profileImgClass}
-				/>
-			)
-		}
-		{
-			showPicture && !isLocalProfilePhoto && profileUrl && (
-				<img
-					src={profileUrl}
-					width={160}
-					height={160}
-					alt={`Portrait of ${basics.name}`}
-					class={profileImgClass}
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-				/>
-			)
-		}
+		<img
+			src={"/profile_picture.webp"}
+			width={160}
+			height={160}
+			alt={`Portrait of ${basics.name}`}
+			class={profileImgClass}
+			loading="eager"
+			decoding="async"
+		/>
 		<div class="min-w-0 flex-1">
 			<h1 class="font-display text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl lg:text-5xl">
 				{basics.name}

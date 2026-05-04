@@ -1,5 +1,4 @@
 ---
-import { getImage } from 'astro:assets';
 import EducationSection from '../components/resume/EducationSection.astro';
 import ExperienceSection from '../components/resume/ExperienceSection.astro';
 import InterestsSection from '../components/resume/InterestsSection.astro';
@@ -12,13 +11,11 @@ import SummarySection from '../components/resume/SummarySection.astro';
 import { resume } from '../data/resume';
 import { stripHtml } from '../data/resume.utils';
 import MainLayout from '../layouts/main.astro';
-import profilePhoto from '../assets/profile/photo-320.jpg';
 
 const pageTitle = `${resume.basics.name} — ${resume.basics.headline}`;
 const metaDescription = stripHtml(resume.summary.content).slice(0, 160);
 
-const ogImage = await getImage({ src: profilePhoto, width: 1200, format: 'jpg' });
-const ogImageUrl = Astro.site ? new URL(ogImage.src, Astro.site).href : undefined;
+const ogImageUrl = Astro.site ? new URL('/profile_picture.webp', Astro.site).href : undefined;
 
 const profileLinks = resume.sections.profiles.items
 	.filter((p) => !p.hidden && p.website?.url)
@@ -30,6 +27,7 @@ const jsonLd: Record<string, unknown> = {
 	name: resume.basics.name,
 	url: Astro.site ? new URL('/', Astro.site).href : undefined,
 	jobTitle: resume.basics.headline,
+	...(ogImageUrl ? { image: ogImageUrl } : {}),
 	...(resume.basics.email ? { email: resume.basics.email } : {}),
 	...(profileLinks.length > 0 ? { sameAs: profileLinks } : {}),
 };
