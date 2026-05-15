@@ -1,5 +1,12 @@
 {
-	"cSpell.words": ["appchains", "Fraunces", "kenigs", "Tanssi"],
+	"cSpell.words": [
+		"appchains",
+		"esbuild",
+		"Fraunces",
+		"kenigs",
+		"Tanssi",
+		"vite"
+	],
 	"css.lint.unknownAtRules": "ignore",
 	"scss.lint.unknownAtRules": "ignore",
 	"less.lint.unknownAtRules": "ignore"

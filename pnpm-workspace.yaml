@@ -1,0 +1,10 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+overrides:
+  devalue: ">=5.8.1"
+  vite: 7.3.2
+packageExtensions:
+  '@tailwindcss/vite':
+    peerDependencies:
+      '@types/node': '*'
