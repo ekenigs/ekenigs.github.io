@@ -10,7 +10,7 @@ layout: ../layouts/main.astro
  </p>
  <a
   href="/"
-  class="min-h-11 rounded-lg px-4 py-2 text-emerald-400 underline decoration-emerald-500/40 underline-offset-4 transition hover:text-emerald-300"
+  class="min-h-11 rounded-lg px-4 py-2 text-orange-400 underline decoration-orange-500/40 underline-offset-4 transition hover:text-orange-300"
  >
   Go home
  </a>

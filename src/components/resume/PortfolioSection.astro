@@ -28,10 +28,10 @@ const portfolioItems: {
 ];
 ---
 
-<Section id="portfolio">
+<Section id="portfolio" variant="carousel">
 	<div data-portfolio-root>
 		<SectionHeading>Portfolio</SectionHeading>
-		<ul class="space-y-10">
+		<ul class="space-y-10" data-animate-stagger>
 			{
 				portfolioItems.map((item) => (
 					<li>
@@ -48,7 +48,7 @@ const portfolioItems: {
 								<button
 									type="button"
 									data-carousel-prev
-									class="flex h-12 w-12 shrink-0 self-center items-center justify-center rounded-full border border-zinc-300/90 bg-white/90 text-zinc-800 shadow-sm backdrop-blur-sm transition hover:border-emerald-600/40 hover:bg-white hover:text-emerald-800 dark:border-zinc-600/90 dark:bg-zinc-900/90 dark:text-zinc-100 dark:hover:border-emerald-500/40 dark:hover:text-emerald-300 sm:h-14 sm:w-14"
+									class="flex h-12 w-12 shrink-0 self-center items-center justify-center rounded-full border border-zinc-300/90 bg-white/90 text-zinc-800 shadow-sm backdrop-blur-sm transition hover:border-orange-600/40 hover:bg-white hover:text-orange-800 dark:border-zinc-600/90 dark:bg-zinc-900/90 dark:text-zinc-100 dark:hover:border-orange-500/40 dark:hover:text-orange-300 sm:h-14 sm:w-14"
 									aria-label="Previous screenshot"
 								>
 									<svg
@@ -91,7 +91,7 @@ const portfolioItems: {
 								<button
 									type="button"
 									data-carousel-next
-									class="flex h-12 w-12 shrink-0 self-center items-center justify-center rounded-full border border-zinc-300/90 bg-white/90 text-zinc-800 shadow-sm backdrop-blur-sm transition hover:border-emerald-600/40 hover:bg-white hover:text-emerald-800 dark:border-zinc-600/90 dark:bg-zinc-900/90 dark:text-zinc-100 dark:hover:border-emerald-500/40 dark:hover:text-emerald-300 sm:h-14 sm:w-14"
+									class="flex h-12 w-12 shrink-0 self-center items-center justify-center rounded-full border border-zinc-300/90 bg-white/90 text-zinc-800 shadow-sm backdrop-blur-sm transition hover:border-orange-600/40 hover:bg-white hover:text-orange-800 dark:border-zinc-600/90 dark:bg-zinc-900/90 dark:text-zinc-100 dark:hover:border-orange-500/40 dark:hover:text-orange-300 sm:h-14 sm:w-14"
 									aria-label="Next screenshot"
 								>
 									<svg
@@ -132,7 +132,7 @@ const portfolioItems: {
 					<button
 						type="button"
 						data-modal-prev
-						class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-zinc-500/50 bg-zinc-900/90 text-zinc-100 shadow-lg transition hover:border-emerald-500/50 hover:text-emerald-200 sm:h-14 sm:w-14"
+						class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-zinc-500/50 bg-zinc-900/90 text-zinc-100 shadow-lg transition hover:border-amber-500/50 hover:text-amber-200 sm:h-14 sm:w-14"
 						aria-label="Previous image"
 					>
 						<svg
@@ -152,7 +152,7 @@ const portfolioItems: {
 						<button
 							type="button"
 							data-modal-close
-							class="absolute -top-10 right-0 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-zinc-500/50 bg-zinc-900/90 text-lg leading-none text-zinc-100 shadow-lg transition hover:border-emerald-500/50 hover:text-emerald-200 sm:-top-12"
+							class="absolute -top-10 right-0 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-zinc-500/50 bg-zinc-900/90 text-lg leading-none text-zinc-100 shadow-lg transition hover:border-amber-500/50 hover:text-amber-200 sm:-top-12"
 							aria-label="Close"
 						>
 							<span aria-hidden="true">×</span>
@@ -166,7 +166,7 @@ const portfolioItems: {
 					<button
 						type="button"
 						data-modal-next
-						class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-zinc-500/50 bg-zinc-900/90 text-zinc-100 shadow-lg transition hover:border-emerald-500/50 hover:text-emerald-200 sm:h-14 sm:w-14"
+						class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-zinc-500/50 bg-zinc-900/90 text-zinc-100 shadow-lg transition hover:border-amber-500/50 hover:text-amber-200 sm:h-14 sm:w-14"
 						aria-label="Next image"
 					>
 						<svg

@@ -1,18 +1,20 @@
 ---
 interface Props {
 	id: string;
+	variant?: 'default' | 'warm' | 'timeline' | 'diagonal' | 'cards' | 'grid' | 'carousel' | 'minimal' | 'chips';
 	class?: string;
 }
 
-const { id, class: className = '' } = Astro.props;
+const { id, variant = 'default', class: className = '' } = Astro.props;
 ---
 
 <section
 	id={id}
-	class:list={[
-		'scroll-mt-16 mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12',
-		className,
-	]}
+	class:list={['section', variant !== 'default' && `section--${variant}`, className]}
+	data-animate-section
 >
-	<slot />
+	{variant !== 'default' && <div class="section__bg" aria-hidden="true"></div>}
+	<div class="section__inner" data-cursor-trail-content>
+		<slot />
+	</div>
 </section>

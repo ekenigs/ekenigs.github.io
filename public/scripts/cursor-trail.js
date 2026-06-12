@@ -1,36 +1,33 @@
 (() => {
-	const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-	const hasCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+	const prefersReducedMotion = window.matchMedia(
+		"(prefers-reduced-motion: reduce)",
+	).matches;
+	const hasCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
 	if (prefersReducedMotion || hasCoarsePointer) return;
 
-	const canvas = document.querySelector('[data-cursor-trail]');
+	const canvas = document.querySelector("[data-cursor-trail]");
 	if (!(canvas instanceof HTMLCanvasElement)) return;
-	if (canvas.dataset.initialized === 'true') return;
-	canvas.dataset.initialized = 'true';
+	if (canvas.dataset.initialized === "true") return;
+	canvas.dataset.initialized = "true";
 
-	const context = canvas.getContext('2d');
+	const context = canvas.getContext("2d");
 	if (!context) return;
 
 	const trailPoints = [];
 	const maxTrailPoints = 26;
 	const pointLifetimeMs = 520;
 	let rafId = 0;
-	const interactiveSelector = [
-		'a',
-		'button',
-		'input',
-		'select',
-		'textarea',
-		'label',
-		'summary',
-		'[role="button"]',
-		'[role="link"]',
-		'[contenteditable="true"]',
-		'[data-cursor-trail-ignore]',
-	].join(',');
+
+	const contentSelector = [
+		"[data-cursor-trail-content]",
+		"[data-cursor-trail-ignore]",
+		"[data-portfolio-modal]:not(.hidden)",
+	].join(",");
 
 	const getColor = () =>
-		document.documentElement.classList.contains('dark') ? '52,211,153' : '5,150,105';
+		document.documentElement.classList.contains("dark")
+			? "251,191,36"
+			: "217,119,6";
 
 	const resizeCanvas = () => {
 		const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -39,6 +36,15 @@
 		canvas.style.width = `${window.innerWidth}px`;
 		canvas.style.height = `${window.innerHeight}px`;
 		context.setTransform(dpr, 0, 0, dpr, 0, 0);
+	};
+
+	const clearTrail = () => {
+		trailPoints.length = 0;
+		if (rafId) {
+			cancelAnimationFrame(rafId);
+			rafId = 0;
+		}
+		context.clearRect(0, 0, canvas.width, canvas.height);
 	};
 
 	const render = () => {
@@ -65,8 +71,8 @@
 			context.lineTo(point.x, point.y);
 			context.strokeStyle = `rgba(${color}, ${alpha.toFixed(3)})`;
 			context.lineWidth = 1.5 + progressRatio * 4;
-			context.lineCap = 'round';
-			context.lineJoin = 'round';
+			context.lineCap = "round";
+			context.lineJoin = "round";
 			context.stroke();
 		}
 
@@ -74,6 +80,7 @@
 			rafId = window.requestAnimationFrame(render);
 		} else {
 			rafId = 0;
+			context.clearRect(0, 0, canvas.width, canvas.height);
 		}
 	};
 
@@ -92,26 +99,37 @@
 		return Boolean(selection && !selection.isCollapsed);
 	};
 
-	const isInteractiveElement = (target) => {
-		if (!(target instanceof Element)) return false;
-		return Boolean(target.closest(interactiveSelector));
+	const isOverContent = (x, y) => {
+		const stack = document.elementsFromPoint(x, y);
+		for (const el of stack) {
+			if (el === canvas) continue;
+			if (!(el instanceof Element)) continue;
+			if (el.closest(contentSelector)) return true;
+		}
+		return false;
 	};
 
 	const handlePointerMove = (event) => {
-		if (event.pointerType !== 'mouse') return;
-		if (hasActiveTextSelection()) return;
-		if (isInteractiveElement(event.target)) return;
+		if (event.pointerType !== "mouse") return;
+		if (hasActiveTextSelection()) {
+			clearTrail();
+			return;
+		}
+		if (isOverContent(event.clientX, event.clientY)) {
+			clearTrail();
+			return;
+		}
 		addPoint(event.clientX, event.clientY);
 	};
 
 	const handlePointerLeave = () => {
-		if (!rafId && trailPoints.length > 1) {
-			rafId = window.requestAnimationFrame(render);
-		}
+		clearTrail();
 	};
 
 	resizeCanvas();
-	window.addEventListener('resize', resizeCanvas, { passive: true });
-	window.addEventListener('pointermove', handlePointerMove, { passive: true });
-	window.addEventListener('pointerleave', handlePointerLeave, { passive: true });
+	window.addEventListener("resize", resizeCanvas, { passive: true });
+	window.addEventListener("pointermove", handlePointerMove, { passive: true });
+	window.addEventListener("pointerleave", handlePointerLeave, {
+		passive: true,
+	});
 })();

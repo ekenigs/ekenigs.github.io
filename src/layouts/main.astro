@@ -68,6 +68,10 @@ const isProduction = import.meta.env.PROD;
 		></canvas>
 		<ThemeToggle />
 		<slot />
+		<script>
+			import { initScrollAnimations } from '../scripts/scroll-animations';
+			initScrollAnimations();
+		</script>
 		<script is:inline defer fetchpriority="low" src="/scripts/cursor-trail.js"></script>
 	</body>
 </html>

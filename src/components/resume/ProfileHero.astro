@@ -22,17 +22,16 @@ const linkedinProfile =
 	profileLinks.find((link) => link.icon.includes('linkedin') || link.label.toLowerCase().includes('linkedin')) ?? null;
 
 const profileImgClass =
-	'h-32 w-32 shrink-0 rounded-full object-cover ring-1 ring-zinc-300 shadow-xl shadow-zinc-900/10 dark:ring-zinc-700 dark:shadow-black/40 sm:h-40 sm:w-40';
+	'h-32 w-32 shrink-0 rounded-full object-cover ring-2 ring-amber-400/40 shadow-xl shadow-amber-900/10 dark:ring-amber-500/30 dark:shadow-black/40 sm:h-40 sm:w-40';
 ---
 
 <header id="profile" class="relative scroll-mt-16 overflow-hidden">
-	<div
-		class="pointer-events-none absolute inset-0 opacity-25 bg-size-[48px_48px] [background-image:linear-gradient(to_right,rgb(161_161_170/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(161_161_170/0.45)_1px,transparent_1px)] dark:opacity-35 dark:[background-image:linear-gradient(to_right,rgb(63_63_70/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(63_63_70/0.45)_1px,transparent_1px)]"
-		aria-hidden="true"
-	>
-	</div>
+	<div class="hero-glow pointer-events-none absolute inset-0" aria-hidden="true"></div>
+	<canvas data-hero-scene class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+	<div class="hero-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
 	<div
 		class="relative mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-start lg:gap-8 lg:px-8 lg:py-14"
+		data-cursor-trail-content
 	>
 		<img
 			src={"/profile_picture.webp"}
@@ -42,18 +41,29 @@ const profileImgClass =
 			class={profileImgClass}
 			loading="eager"
 			decoding="async"
+			data-animate-hero
 		/>
 		<div class="min-w-0 flex-1">
-			<h1 class="font-display text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl lg:text-5xl">
+			<h1
+				class="font-display text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl lg:text-5xl"
+				data-animate-hero
+			>
 				{basics.name}
 			</h1>
-			<p class="mt-3 text-lg font-medium text-emerald-700 dark:text-emerald-400 sm:text-xl">{basics.headline}</p>
-			<ContactActions
-				location={basics.location}
-				email={basics.email}
-				linkedin={linkedinProfile}
-				github={githubProfile}
-			/>
+			<p class="text-highlight mt-3 text-lg font-medium sm:text-xl" data-animate-hero>{basics.headline}</p>
+			<div data-animate-hero>
+				<ContactActions
+					location={basics.location}
+					email={basics.email}
+					linkedin={linkedinProfile}
+					github={githubProfile}
+				/>
+			</div>
 		</div>
 	</div>
 </header>
+
+<script>
+	import { initHeroScene } from '../../scripts/hero-scene';
+	initHeroScene();
+</script>

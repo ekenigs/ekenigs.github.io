@@ -17,11 +17,14 @@ const languageFlags: Record<string, string> = {
 
 {
 	isSectionVisible(section) && items.length > 0 && (
-		<Section id="languages">
+		<Section id="languages" variant="minimal">
 			<SectionHeading>{section.title}</SectionHeading>
-			<ul class="space-y-3">
+			<ul class="space-y-3" data-animate-stagger>
 				{items.map((row) => (
-					<li class="flex min-h-12 flex-wrap items-center justify-between gap-3 rounded-lg border border-zinc-200/90 bg-white/70 px-4 py-3 dark:border-zinc-800/90 dark:bg-zinc-900/35">
+					<li
+						data-level-card
+						class="flex min-h-12 flex-wrap items-center justify-between gap-3 rounded-lg border border-zinc-200/90 bg-white/70 px-4 py-3 transition hover:border-orange-400/40 hover:shadow-md hover:shadow-orange-500/5 dark:border-zinc-800/90 dark:bg-zinc-900/35 dark:hover:border-orange-500/30"
+					>
 						<span class="text-sm font-medium text-zinc-800 dark:text-zinc-200">
 							<span aria-hidden="true">{languageFlags[row.language.toLowerCase()] ?? '🌐'}</span>
 							{' '}
@@ -34,3 +37,10 @@ const languageFlags: Record<string, string> = {
 		</Section>
 	)
 }
+
+<script>
+	import { initLevelDotsHoverWave } from "../../scripts/skills-hover-wave";
+
+	initLevelDotsHoverWave();
+	document.addEventListener("astro:after-swap", initLevelDotsHoverWave);
+</script>

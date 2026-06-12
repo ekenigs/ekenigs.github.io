@@ -12,13 +12,14 @@ const safe = Math.min(Math.max(Math.round(level), 0), max);
 <span class="sr-only">
 	{label}: {safe} out of {max}
 </span>
-<span class="inline-flex gap-1" role="img" aria-hidden="true">
+<span class="inline-flex gap-1 overflow-visible" role="img" aria-hidden="true" data-level-dots>
 	{
 		Array.from({ length: max }, (_, i) => (
 			<span
+				data-level-dot
 				class:list={[
 					'h-2 w-2 rounded-full',
-					i < safe ? 'bg-emerald-500/90' : 'bg-zinc-300 dark:bg-zinc-700',
+					i < safe ? 'bg-amber-500/90' : 'bg-zinc-300 dark:bg-zinc-700',
 				]}
 			></span>
 		))

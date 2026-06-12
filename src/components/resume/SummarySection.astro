@@ -9,9 +9,11 @@ const { summary } = resume;
 
 {
 	summary.hidden !== true && (
-		<Section id="summary">
+		<Section id="summary" variant="warm">
 			<SectionHeading>{summary.title}</SectionHeading>
-			<RichHtml html={summary.content} />
+			<div data-animate-summary>
+				<RichHtml html={summary.content} />
+			</div>
 		</Section>
 	)
 }
