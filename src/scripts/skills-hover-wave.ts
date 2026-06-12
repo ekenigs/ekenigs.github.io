@@ -4,6 +4,11 @@ function shouldSkip(): boolean {
 	return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+function snapDotsVisible(dots: NodeListOf<Element>): void {
+	gsap.killTweensOf(dots, "opacity,x");
+	gsap.set(dots, { opacity: 1, x: 0 });
+}
+
 export function initLevelDotsHoverWave(): void {
 	if (shouldSkip()) return;
 
@@ -16,7 +21,8 @@ export function initLevelDotsHoverWave(): void {
 		if (dots.length === 0) return;
 
 		card.addEventListener("mouseenter", () => {
-			gsap.killTweensOf(dots);
+			snapDotsVisible(dots);
+			gsap.killTweensOf(dots, "y");
 			gsap.set(dots, { y: 0 });
 
 			gsap.to(dots, {
@@ -30,7 +36,7 @@ export function initLevelDotsHoverWave(): void {
 		});
 
 		card.addEventListener("mouseleave", () => {
-			gsap.killTweensOf(dots);
+			gsap.killTweensOf(dots, "y");
 			gsap.set(dots, { y: 0 });
 		});
 	});

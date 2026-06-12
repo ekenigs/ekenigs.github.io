@@ -9,34 +9,84 @@ function shouldSkipAnimations(): boolean {
 	);
 }
 
-function initLevelDotsEnterAnimation(sectionId: string): void {
-	const rows = document.querySelectorAll(
-		`#${sectionId} [data-animate-stagger] > li`,
-	);
-	if (rows.length === 0) return;
+type LevelSectionSpeed = "fast" | "normal";
 
-	const dotTimeline = gsap.timeline({
+const levelSectionConfig: Record<
+	LevelSectionSpeed,
+	{
+		rowDuration: number;
+		rowStagger: number;
+		dotDuration: number;
+		dotStagger: number;
+		dotStart: number;
+		rowOverlap: number;
+	}
+> = {
+	fast: {
+		rowDuration: 0.35,
+		rowStagger: 0.05,
+		dotDuration: 0.28,
+		dotStagger: 0.04,
+		dotStart: 0.12,
+		rowOverlap: 0.18,
+	},
+	normal: {
+		rowDuration: 0.45,
+		rowStagger: 0.07,
+		dotDuration: 0.38,
+		dotStagger: 0.05,
+		dotStart: 0.18,
+		rowOverlap: 0.14,
+	},
+};
+
+function initLevelSectionAnimation(
+	sectionId: string,
+	speed: LevelSectionSpeed,
+): void {
+	const section = document.querySelector(`#${sectionId}`);
+	const rows = section?.querySelectorAll("[data-animate-stagger] > li");
+	if (!section || !rows || rows.length === 0) return;
+
+	const config = levelSectionConfig[speed];
+	gsap.set(rows, { opacity: 0, y: 20 });
+	const dots = section.querySelectorAll("[data-level-dot]");
+	gsap.set(dots, { opacity: 0, x: 20 });
+
+	const timeline = gsap.timeline({
 		scrollTrigger: {
-			trigger: `#${sectionId}`,
-			start: "top 85%",
+			trigger: section,
+			start: "top 88%",
 			once: true,
+			invalidateOnRefresh: true,
 		},
 	});
 
 	rows.forEach((row, index) => {
-		const dots = row.querySelectorAll("[data-level-dot]");
-		if (dots.length === 0) return;
+		timeline.to(
+			row,
+			{
+				opacity: 1,
+				y: 0,
+				duration: config.rowDuration,
+				ease: "power2.out",
+			},
+			index * config.rowStagger,
+		);
 
-		dotTimeline.to(
-			dots,
+		const rowDots = row.querySelectorAll("[data-level-dot]");
+		if (rowDots.length === 0) return;
+
+		timeline.to(
+			rowDots,
 			{
 				opacity: 1,
 				x: 0,
-				duration: 0.45,
+				duration: config.dotDuration,
 				ease: "power3.out",
-				stagger: { each: 0.07, from: "end" },
+				stagger: { each: config.dotStagger, from: "end" },
 			},
-			index === 0 ? 0.3 : "-=0.15",
+			index === 0 ? config.dotStart : `-=${config.rowOverlap}`,
 		);
 	});
 }
@@ -70,6 +120,7 @@ export function initScrollAnimations(): void {
 				trigger: section,
 				start: "top 85%",
 				once: true,
+				invalidateOnRefresh: true,
 			},
 		});
 	});
@@ -80,12 +131,15 @@ export function initScrollAnimations(): void {
 			trigger: heading,
 			start: "top 85%",
 			once: true,
+			invalidateOnRefresh: true,
 			onEnter: () => heading.classList.add("is-visible"),
 		});
 	});
 
 	const staggerContainers = document.querySelectorAll("[data-animate-stagger]");
 	staggerContainers.forEach((container) => {
+		if (container.closest("#skills, #languages")) return;
+
 		const children = container.children;
 		if (children.length === 0) return;
 
@@ -99,12 +153,18 @@ export function initScrollAnimations(): void {
 				trigger: container,
 				start: "top 88%",
 				once: true,
+				invalidateOnRefresh: true,
 			},
 		});
 	});
 
-	initLevelDotsEnterAnimation("skills");
-	initLevelDotsEnterAnimation("languages");
+	initLevelSectionAnimation("skills", "fast");
+	initLevelSectionAnimation("languages", "normal");
 
 	initSummaryTextAnimation();
+
+	const refreshScrollTriggers = () => ScrollTrigger.refresh();
+	window.addEventListener("load", refreshScrollTriggers, { once: true });
+	window.addEventListener("resize", refreshScrollTriggers, { passive: true });
+	refreshScrollTriggers();
 }
