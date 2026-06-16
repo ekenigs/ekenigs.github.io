@@ -1,14 +1,9 @@
 allowBuilds:
   esbuild: true
   sharp: true
-minimumReleaseAgeExclude:
-  - '@astrojs/internal-helpers@0.10.0'
-  - '@astrojs/markdown-remark@7.2.0'
-  - '@astrojs/mdx@6.0.1'
-  - astro@6.4.2
 overrides:
-  devalue: ">=5.8.1"
-  vite: 7.3.2
+  esbuild: ">=0.28.1"
+  vite: ">=7.3.5"
 packageExtensions:
   '@tailwindcss/vite':
     peerDependencies:
