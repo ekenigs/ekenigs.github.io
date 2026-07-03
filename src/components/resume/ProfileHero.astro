@@ -22,13 +22,11 @@ const linkedinProfile =
 	profileLinks.find((link) => link.icon.includes('linkedin') || link.label.toLowerCase().includes('linkedin')) ?? null;
 
 const profileImgClass =
-	'h-32 w-32 shrink-0 rounded-full object-cover ring-2 ring-amber-400/40 shadow-xl shadow-amber-900/10 dark:ring-amber-500/30 dark:shadow-black/40 sm:h-40 sm:w-40';
+	'h-32 w-32 shrink-0 rounded-full object-cover ring-2 ring-amber-400/30 sm:h-40 sm:w-40 dark:ring-amber-500/25';
 ---
 
-<header id="profile" class="relative scroll-mt-16 overflow-hidden">
+<header id="profile" class="relative scroll-mt-16 overflow-hidden border-b border-zinc-200/80 dark:border-zinc-800/80">
 	<div class="hero-glow pointer-events-none absolute inset-0" aria-hidden="true"></div>
-	<canvas data-hero-scene class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
-	<div class="hero-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
 	<div
 		class="relative mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-start lg:gap-8 lg:px-8 lg:py-14"
 		data-cursor-trail-content
@@ -45,7 +43,7 @@ const profileImgClass =
 		/>
 		<div class="min-w-0 flex-1">
 			<h1
-				class="font-display text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl lg:text-5xl"
+				class="font-display text-balance text-3xl font-semibold tracking-[-0.03em] text-zinc-900 dark:text-zinc-50 sm:text-4xl lg:text-5xl"
 				data-animate-hero
 			>
 				{basics.name}
@@ -62,8 +60,3 @@ const profileImgClass =
 		</div>
 	</div>
 </header>
-
-<script>
-	import { initHeroScene } from '../../scripts/hero-scene';
-	initHeroScene();
-</script>

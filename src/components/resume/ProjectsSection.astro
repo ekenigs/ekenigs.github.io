@@ -11,9 +11,9 @@ const items = visibleItems(section.items as ResumeProjectItem[]);
 
 {
 	isSectionVisible(section) && items.length > 0 && (
-		<Section id="projects" variant="cards">
+		<Section id="projects">
 			<SectionHeading>{section.title}</SectionHeading>
-			<ul class="space-y-8" data-animate-stagger>
+			<ul class="space-y-6" data-animate-stagger>
 				{items.map((project) => {
 					const url = project.website?.url?.trim();
 					return (

@@ -1,0 +1,36 @@
+---
+import { resume } from '../../data/resume';
+
+const { basics } = resume;
+const email = basics.email?.trim();
+const year = new Date().getFullYear();
+---
+
+<footer id="footer" class="site-footer scroll-mt-16" data-cursor-trail-content>
+	<div class="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8">
+		<div class="text-center">
+			<h2 class="font-display text-balance text-xl font-semibold tracking-[-0.02em] text-zinc-900 dark:text-zinc-50 sm:text-2xl">
+				Let's build something together
+			</h2>
+			<p class="text-muted mx-auto mt-2 max-w-md text-sm leading-relaxed sm:text-base">
+				Open to lead engineering roles and selective contract work. The fastest way to reach me is email.
+			</p>
+			{
+				email && (
+					<a
+						href={`mailto:${email}`}
+						class="mt-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:bg-orange-500 dark:hover:bg-orange-600 dark:focus-visible:outline-orange-500"
+					>
+						Email {basics.name.split(' ')[0]}
+					</a>
+				)
+			}
+		</div>
+		<div class="text-muted mt-8 flex flex-col items-center gap-3 text-sm sm:flex-row sm:justify-between">
+			<p>© {year} {basics.name}</p>
+			<a href="#profile" class="link-hover text-sm">
+				Back to top
+			</a>
+		</div>
+	</div>
+</footer>

@@ -1,27 +1,39 @@
 ---
+import { clampLevel, levelLabel, type LevelScale } from "../../data/resume.utils";
+
 interface Props {
 	level: number;
 	max?: number;
 	label: string;
+	scale?: LevelScale;
 }
 
-const { level, max = 5, label } = Astro.props;
-const safe = Math.min(Math.max(Math.round(level), 0), max);
+const { level, max = 5, label, scale = "skills" } = Astro.props;
+const safe = clampLevel(level, max);
+const readable = levelLabel(safe, scale, max);
 ---
 
 <span class="sr-only">
-	{label}: {safe} out of {max}
+	{label}: {readable} ({safe} of {max})
 </span>
-<span class="inline-flex gap-1 overflow-visible" role="img" aria-hidden="true" data-level-dots>
-	{
-		Array.from({ length: max }, (_, i) => (
-			<span
-				data-level-dot
-				class:list={[
-					'h-2 w-2 rounded-full',
-					i < safe ? 'bg-amber-500/90' : 'bg-zinc-300 dark:bg-zinc-700',
-				]}
-			></span>
-		))
-	}
+<span class="inline-flex shrink-0 items-center gap-2">
+	<span
+		class="text-xs font-medium text-amber-800 dark:text-amber-300"
+		aria-hidden="true"
+	>
+		{readable}
+	</span>
+	<span class="inline-flex gap-1 overflow-visible" role="img" aria-hidden="true" data-level-dots>
+		{
+			Array.from({ length: max }, (_, i) => (
+				<span
+					data-level-dot
+					class:list={[
+						"h-2 w-2 rounded-full",
+						i < safe ? "bg-amber-500/90" : "bg-zinc-300 dark:bg-zinc-700",
+					]}
+				/>
+			))
+		}
+	</span>
 </span>

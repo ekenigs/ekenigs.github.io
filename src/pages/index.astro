@@ -4,8 +4,10 @@ import ExperienceSection from '../components/resume/ExperienceSection.astro';
 import InterestsSection from '../components/resume/InterestsSection.astro';
 import LanguagesSection from '../components/resume/LanguagesSection.astro';
 import PortfolioSection from '../components/resume/PortfolioSection.astro';
+import PageNav from '../components/resume/PageNav.astro';
 import ProfileHero from '../components/resume/ProfileHero.astro';
 import ProjectsSection from '../components/resume/ProjectsSection.astro';
+import SiteFooter from '../components/resume/SiteFooter.astro';
 import SkillsSection from '../components/resume/SkillsSection.astro';
 import SummarySection from '../components/resume/SummarySection.astro';
 import { resume } from '../data/resume';
@@ -36,6 +38,7 @@ const jsonLd: Record<string, unknown> = {
 <MainLayout title={pageTitle} description={metaDescription} ogImageUrl={ogImageUrl} jsonLd={jsonLd}>
 	<main>
 		<ProfileHero />
+		<PageNav />
 		<SummarySection />
 		<ExperienceSection />
 		<EducationSection />
@@ -45,9 +48,5 @@ const jsonLd: Record<string, unknown> = {
 		<LanguagesSection />
 		<InterestsSection />
 	</main>
-	<footer id="footer" class="scroll-mt-16 bg-gradient-to-t from-amber-50/40 to-transparent py-10 text-center text-sm text-zinc-600 dark:from-amber-950/20 dark:text-zinc-400" data-cursor-trail-content>
-		<p>
-			© {new Date().getFullYear()} {resume.basics.name}. Built with Astro & Tailwind CSS.
-		</p>
-	</footer>
+	<SiteFooter />
 </MainLayout>

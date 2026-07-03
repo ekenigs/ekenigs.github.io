@@ -2,6 +2,7 @@
 import { resume } from '../../data/resume';
 import { isSectionVisible, visibleItems } from '../../data/resume.utils';
 import LevelDots from './LevelDots.astro';
+import LevelLegend from './LevelLegend.astro';
 import Section from './Section.astro';
 import SectionHeading from './SectionHeading.astro';
 
@@ -11,16 +12,14 @@ const items = visibleItems(section.items);
 
 {
 	isSectionVisible(section) && items.length > 0 && (
-		<Section id="skills" variant="grid">
+		<Section id="skills">
 			<SectionHeading>{section.title}</SectionHeading>
-			<ul class="grid gap-4 sm:grid-cols-2" data-animate-stagger>
+			<LevelLegend scale="skills" />
+			<ul class="grid gap-3 sm:grid-cols-2" data-animate-stagger>
 				{items.map((skill) => (
-					<li
-						data-level-card
-						class="flex min-h-12 items-center justify-between gap-4 rounded-lg border border-zinc-200/90 bg-white/70 px-4 py-3 transition hover:border-orange-400/40 hover:shadow-md hover:shadow-orange-500/5 dark:border-zinc-800/90 dark:bg-zinc-900/35 dark:hover:border-orange-500/30"
-					>
+					<li data-level-card class="list-card">
 						<span class="min-w-0 flex-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">{skill.name}</span>
-						<LevelDots level={skill.level} label={skill.name} />
+						<LevelDots level={skill.level} label={skill.name} scale="skills" />
 					</li>
 				))}
 			</ul>

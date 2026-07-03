@@ -11,9 +11,9 @@ const items = visibleItems(section.items);
 
 {
 	isSectionVisible(section) && items.length > 0 && (
-		<Section id="experience" variant="timeline">
+		<Section id="experience">
 			<SectionHeading>{section.title}</SectionHeading>
-			<ol class="relative space-y-12 border-l border-zinc-200 pl-6 dark:border-zinc-800 sm:pl-8" data-animate-stagger>
+			<ol class="relative space-y-10 border-l border-zinc-200 pl-6 dark:border-zinc-800 sm:pl-8" data-animate-stagger>
 				{items.map((job) => {
 					const companyUrl = job.website?.url?.trim();
 					return (
@@ -40,7 +40,7 @@ const items = visibleItems(section.items);
 									</h3>
 									<p class="text-highlight text-base font-medium">{job.position}</p>
 								</div>
-								<div class="text-sm text-zinc-600 dark:text-zinc-400">
+								<div class="text-muted text-sm">
 									<time>{job.period}</time>
 									{job.location && (
 										<>

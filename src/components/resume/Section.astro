@@ -1,7 +1,7 @@
 ---
 interface Props {
 	id: string;
-	variant?: 'default' | 'warm' | 'timeline' | 'diagonal' | 'cards' | 'grid' | 'carousel' | 'minimal' | 'chips';
+	variant?: 'default' | 'accent';
 	class?: string;
 }
 
@@ -10,10 +10,9 @@ const { id, variant = 'default', class: className = '' } = Astro.props;
 
 <section
 	id={id}
-	class:list={['section', variant !== 'default' && `section--${variant}`, className]}
+	class:list={['section', variant === 'accent' && 'section--accent', className]}
 	data-animate-section
 >
-	{variant !== 'default' && <div class="section__bg" aria-hidden="true"></div>}
 	<div class="section__inner" data-cursor-trail-content>
 		<slot />
 	</div>

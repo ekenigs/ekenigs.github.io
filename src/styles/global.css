@@ -25,6 +25,7 @@
 @layer base {
 	html {
 		@apply scroll-smooth antialiased bg-zinc-50 text-zinc-900 font-sans;
+		scroll-padding-top: 3.5rem;
 		scrollbar-width: thin;
 		scrollbar-color: #d97706 #e4e4e7;
 	}
@@ -81,11 +82,23 @@
 	}
 
 	.card-surface {
-		@apply rounded-xl border border-zinc-200/90 bg-zinc-100/60 p-5 transition dark:border-zinc-800/80 dark:bg-zinc-900/40 sm:p-6;
+		@apply rounded-xl border border-zinc-200/90 bg-zinc-100/60 p-5 dark:border-zinc-800/80 dark:bg-zinc-900/40 sm:p-6;
 	}
 
 	.card-surface-hover {
-		@apply rounded-xl border border-zinc-200/90 bg-zinc-100/60 p-5 transition hover:scale-[1.01] hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/5 dark:border-zinc-800/80 dark:bg-zinc-900/40 dark:hover:border-orange-500/25 dark:hover:shadow-orange-500/10 sm:p-6;
+		@apply rounded-xl border border-zinc-200/90 bg-zinc-100/60 p-5 transition hover:border-orange-500/35 dark:border-zinc-800/80 dark:bg-zinc-900/40 dark:hover:border-orange-500/30 sm:p-6;
+	}
+
+	.list-card {
+		@apply flex min-h-12 items-center justify-between gap-4 rounded-xl border border-zinc-200/90 bg-zinc-100/60 px-4 py-3 transition hover:border-orange-500/35 dark:border-zinc-800/80 dark:bg-zinc-900/40 dark:hover:border-orange-500/30;
+	}
+
+	.focus-ring {
+		@apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:focus-visible:outline-orange-500;
+	}
+
+	.icon-btn {
+		@apply inline-flex shrink-0 items-center justify-center rounded-full border border-zinc-300/90 bg-white/90 text-zinc-800 transition hover:border-orange-600/40 hover:bg-white hover:text-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:border-zinc-600/90 dark:bg-zinc-900/90 dark:text-zinc-100 dark:hover:border-orange-500/40 dark:hover:text-orange-300 dark:focus-visible:outline-orange-500;
 	}
 
 	.text-highlight {
@@ -96,141 +109,44 @@
 		@apply text-orange-700 dark:text-orange-400;
 	}
 
-	.focus-ring {
-		@apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:focus-visible:outline-orange-500;
+	.text-muted {
+		@apply text-zinc-600 dark:text-zinc-400;
 	}
 
 	/* Section system */
 	.section {
-		@apply relative scroll-mt-16 overflow-hidden;
-	}
-
-	.section__bg {
-		@apply pointer-events-none absolute inset-0 -z-10;
+		@apply relative scroll-mt-16;
+		border-top: 1px solid color-mix(in oklab, var(--color-accent) 14%, transparent);
 	}
 
 	.section__inner {
-		@apply relative mx-auto w-full max-w-3xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12;
+		@apply relative mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14;
 	}
 
-	.section--warm .section__bg {
+	.section--accent .section__inner {
 		background: linear-gradient(
-			135deg,
-			color-mix(in oklab, var(--color-accent-bright) 12%, transparent) 0%,
-			transparent 60%
-		);
-	}
-
-	html.dark .section--warm .section__bg {
-		background: linear-gradient(
-			135deg,
-			color-mix(in oklab, var(--color-accent) 8%, transparent) 0%,
-			transparent 60%
-		);
-	}
-
-	.section--timeline .section__bg {
-		background: linear-gradient(
-			to bottom,
-			color-mix(in oklab, var(--color-accent-bright) 6%, transparent),
-			transparent
-		);
-	}
-
-	html.dark .section--timeline .section__bg {
-		background: linear-gradient(
-			to bottom,
-			color-mix(in oklab, var(--color-accent) 5%, #09090b),
-			#09090b
-		);
-	}
-
-	.section--diagonal .section__bg {
-		background: linear-gradient(
-			165deg,
-			color-mix(in oklab, var(--color-accent-bright) 14%, transparent) 0%,
-			transparent 40%,
+			180deg,
+			color-mix(in oklab, var(--color-accent-bright) 7%, transparent) 0%,
 			transparent 100%
 		);
 	}
 
-	html.dark .section--diagonal .section__bg {
+	html.dark .section--accent .section__inner {
 		background: linear-gradient(
-			165deg,
-			color-mix(in oklab, var(--color-accent) 10%, transparent) 0%,
-			transparent 45%
+			180deg,
+			color-mix(in oklab, var(--color-accent) 5%, transparent) 0%,
+			transparent 100%
 		);
 	}
 
-	.section--cards .section__bg {
-		background-image: radial-gradient(
-			color-mix(in oklab, var(--color-accent) 18%, transparent) 1px,
-			transparent 1px
-		);
-		background-size: 24px 24px;
-		opacity: 0.35;
-	}
-
-	.section--grid .section__bg {
-		background-image:
-			linear-gradient(
-				color-mix(in oklab, var(--color-accent-bright) 12%, transparent) 1px,
-				transparent 1px
-			),
-			linear-gradient(
-				90deg,
-				color-mix(in oklab, var(--color-accent-bright) 12%, transparent) 1px,
-				transparent 1px
-			);
-		background-size: 32px 32px;
-		opacity: 0.25;
-	}
-
-	html.dark .section--grid .section__bg {
-		opacity: 0.15;
-	}
-
-	.section--carousel .section__bg {
-		background: linear-gradient(
-			to bottom,
-			color-mix(in oklab, var(--color-accent) 4%, #fafafa),
-			color-mix(in oklab, var(--color-accent-bright) 8%, #fafafa)
-		);
-	}
-
-	html.dark .section--carousel .section__bg {
-		background: linear-gradient(
-			to bottom,
-			color-mix(in oklab, var(--color-accent) 6%, #09090b),
-			color-mix(in oklab, var(--color-accent) 3%, #18181b)
-		);
-	}
-
-	.section--minimal .section__bg {
-		border-top: 2px solid
-			color-mix(in oklab, var(--color-accent-bright) 50%, transparent);
-	}
-
-	.section--chips .section__bg {
-		background: linear-gradient(
-			to top,
-			color-mix(in oklab, var(--color-accent-bright) 10%, transparent),
-			transparent
-		);
-	}
-
-	html.dark .section--chips .section__bg {
-		background: linear-gradient(
-			to top,
-			color-mix(in oklab, var(--color-accent) 8%, transparent),
-			transparent
-		);
+	.section-heading {
+		@apply text-balance;
 	}
 
 	.section-heading::after {
 		content: "";
 		display: block;
-		width: 0;
+		width: 3rem;
 		height: 3px;
 		margin-top: 0.5rem;
 		border-radius: 9999px;
@@ -239,37 +155,93 @@
 			var(--color-accent-bright),
 			var(--color-cta)
 		);
-		transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		transform: scaleX(0);
+		transform-origin: left center;
+		transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 
 	.section-heading.is-visible::after {
-		width: 3rem;
+		transform: scaleX(1);
 	}
 
 	.interest-chip {
-		@apply inline-flex items-center rounded-full border border-amber-200/80 bg-amber-50/60 px-3 py-1.5 text-sm text-zinc-700 transition hover:border-orange-400/50 hover:bg-orange-50/80 hover:text-orange-800 dark:border-amber-900/40 dark:bg-amber-950/30 dark:text-zinc-300 dark:hover:border-orange-500/40 dark:hover:bg-orange-950/40 dark:hover:text-orange-300;
+		@apply inline-flex items-center rounded-full border border-amber-200/80 bg-amber-50/60 px-3 py-1.5 text-sm text-zinc-800 transition hover:border-orange-400/50 hover:bg-orange-50/80 hover:text-orange-900 dark:border-amber-900/40 dark:bg-amber-950/30 dark:text-zinc-200 dark:hover:border-orange-500/40 dark:hover:bg-orange-950/40 dark:hover:text-orange-300;
 	}
 
 	.hero-glow {
 		background: radial-gradient(
-			ellipse 80% 60% at 50% 40%,
-			color-mix(in oklab, var(--color-accent-bright) 18%, transparent),
-			transparent 70%
+			ellipse 70% 55% at 50% 35%,
+			color-mix(in oklab, var(--color-accent-bright) 9%, transparent),
+			transparent 72%
 		);
 	}
 
 	html.dark .hero-glow {
 		background: radial-gradient(
-			ellipse 80% 60% at 50% 40%,
-			color-mix(in oklab, var(--color-accent) 12%, transparent),
-			transparent 70%
+			ellipse 70% 55% at 50% 35%,
+			color-mix(in oklab, var(--color-accent) 6%, transparent),
+			transparent 72%
 		);
 	}
-}
 
-@layer utilities {
-	.hero-grid {
-		@apply opacity-25 bg-size-[48px_48px] [background-image:linear-gradient(to_right,rgb(161_161_170/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(161_161_170/0.45)_1px,transparent_1px)] dark:opacity-35 dark:[background-image:linear-gradient(to_right,rgb(63_63_70/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(63_63_70/0.45)_1px,transparent_1px)];
+	.site-footer {
+		@apply border-t border-zinc-200/80 py-12 dark:border-zinc-800/80 sm:py-14;
+	}
+
+	.page-nav__link {
+		@apply shrink-0 rounded-md px-3 py-2 text-sm font-medium text-zinc-600 transition hover:text-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 dark:focus-visible:outline-orange-500;
+	}
+
+	.page-nav__link.is-active {
+		@apply text-orange-700 dark:text-orange-400;
+	}
+
+	.portfolio-slide--portrait {
+		@apply flex w-full shrink-0 basis-full snap-center justify-center bg-transparent;
+	}
+
+	.portfolio-slide__frame--portrait {
+		@apply overflow-hidden rounded-lg bg-zinc-200/30 dark:bg-zinc-950/40;
+	}
+
+	.portfolio-slide--portrait img {
+		@apply block h-auto max-h-[min(58dvh,440px)] w-auto max-w-full object-contain object-top sm:max-h-[min(62dvh,520px)];
+	}
+
+	.portfolio-slide--landscape {
+		@apply aspect-[16/10] w-full shrink-0 basis-full snap-start items-center justify-center;
+	}
+
+	.portfolio-slide--landscape img {
+		@apply h-full w-full object-contain object-top;
+	}
+
+	.portfolio-modal__stage {
+		@apply absolute inset-0 flex items-center justify-center p-4 sm:px-16;
+	}
+
+	.portfolio-modal--portrait .portfolio-modal__stage {
+		@apply items-start pt-[max(3.75rem,calc(env(safe-area-inset-top)+3.25rem))] pb-4;
+	}
+
+	.portfolio-modal__viewport {
+		@apply flex max-h-[min(90dvh,calc(100dvh-2rem))] w-full max-w-6xl items-center justify-center;
+	}
+
+	.portfolio-modal__viewport--portrait {
+		@apply w-auto max-w-[min(100%,calc(100vw-6rem))] items-start overflow-y-auto overscroll-contain rounded-lg bg-zinc-900/40 ring-1 ring-zinc-700/40;
+	}
+
+	.portfolio-modal__viewport--landscape {
+		@apply overflow-hidden;
+	}
+
+	.portfolio-modal__img--portrait {
+		@apply block h-auto w-full max-w-none rounded-lg object-top;
+	}
+
+	.portfolio-modal__img--landscape {
+		@apply mx-auto block max-h-[min(90dvh,calc(100dvh-2rem))] w-full max-w-full rounded-lg object-contain object-top;
 	}
 }
 
@@ -301,22 +273,9 @@
 	}
 }
 
-@keyframes shimmer {
-	0%,
-	100% {
-		opacity: 0.6;
-	}
-	50% {
-		opacity: 1;
-	}
-}
-
-@keyframes float {
-	0%,
-	100% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-8px);
+@media (prefers-reduced-motion: reduce) {
+	.section-heading::after {
+		transform: scaleX(1);
+		transition: none;
 	}
 }

@@ -1,0 +1,62 @@
+---
+import { resume } from '../../data/resume';
+import { isSectionVisible, visibleItems } from '../../data/resume.utils';
+
+type NavItem = { id: string; label: string };
+
+const navItems: NavItem[] = [];
+
+if (resume.summary.hidden !== true) {
+	navItems.push({ id: 'summary', label: resume.summary.title });
+}
+
+const experience = resume.sections.experience;
+if (isSectionVisible(experience) && visibleItems(experience.items).length > 0) {
+	navItems.push({ id: 'experience', label: experience.title });
+}
+
+const education = resume.sections.education;
+if (isSectionVisible(education) && visibleItems(education.items).length > 0) {
+	navItems.push({ id: 'education', label: education.title });
+}
+
+const skills = resume.sections.skills;
+if (isSectionVisible(skills) && visibleItems(skills.items).length > 0) {
+	navItems.push({ id: 'skills', label: skills.title });
+}
+
+navItems.push({ id: 'portfolio', label: 'Portfolio' });
+
+const languages = resume.sections.languages;
+if (isSectionVisible(languages) && visibleItems(languages.items).length > 0) {
+	navItems.push({ id: 'languages', label: languages.title });
+}
+
+navItems.push({ id: 'footer', label: 'Contact' });
+---
+
+{
+	navItems.length > 0 && (
+		<nav
+			class="page-nav sticky top-0 z-40 border-b border-zinc-200/80 bg-zinc-50/90 backdrop-blur-sm dark:border-zinc-800/80 dark:bg-zinc-950/90"
+			aria-label="On this page"
+			data-page-nav
+			data-cursor-trail-ignore
+		>
+			<div class="mx-auto flex w-full max-w-3xl items-center gap-1 overflow-x-auto py-2 pl-4 pr-14 sm:px-6 sm:pr-16 lg:px-8 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden">
+				{navItems.map((item) => (
+					<a href={`#${item.id}`} class="page-nav__link">
+						{item.label}
+					</a>
+				))}
+			</div>
+		</nav>
+	)
+}
+
+<script>
+	import { initPageNav } from '../../scripts/page-nav';
+
+	initPageNav();
+	document.addEventListener('astro:after-swap', initPageNav);
+</script>

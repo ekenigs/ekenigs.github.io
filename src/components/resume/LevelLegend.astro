@@ -1,0 +1,43 @@
+---
+import { levelLabels, type LevelScale } from "../../data/resume.utils";
+
+interface Props {
+	scale: LevelScale;
+	max?: number;
+}
+
+const { scale, max = 5 } = Astro.props;
+const labels = levelLabels(scale, max);
+const title = scale === "languages" ? "Fluency scale" : "Proficiency scale";
+---
+
+<p class="text-muted mb-5 text-xs leading-relaxed sm:mb-6 sm:text-sm">
+	<span class="font-medium text-zinc-700 dark:text-zinc-300">{title}:</span>
+	{" "}
+	<span class="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
+		{
+			labels.map((label, index) => {
+				const level = index + 1;
+				return (
+					<span class="inline-flex items-center gap-1.5">
+						<span class="inline-flex gap-0.5" aria-hidden="true">
+							{
+								Array.from({ length: max }, (_, dotIndex) => (
+									<span
+										class:list={[
+											"h-1.5 w-1.5 rounded-full",
+											dotIndex < level
+												? "bg-amber-500/90"
+												: "bg-zinc-300 dark:bg-zinc-700",
+										]}
+									/>
+								))
+							}
+						</span>
+						<span>{label}</span>
+					</span>
+				);
+			})
+		}
+	</span>
+</p>
