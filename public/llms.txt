@@ -1,6 +1,6 @@
 # Elmar Kenigs — personal site
 
-> Online resume for Elmar Kenigs, Lead Software Engineer (full-stack, decentralized web / dApps).
+> Online resume for Elmar Kenigs, Lead Software Engineer (full-stack: TypeScript, Next.js, Node.js, AWS).
 
 ## Canonical URL
 

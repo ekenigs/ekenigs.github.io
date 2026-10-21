@@ -1,20 +1,9 @@
 ---
-import { resume } from '../../data/resume';
-import { visibleItems } from '../../data/resume.utils';
+import { profileLinks as resumeProfileLinks, resume } from '../../data/resume';
 import ContactActions from './ContactActions.astro';
 
 const { basics } = resume;
-const profileLinks = visibleItems(resume.sections.profiles.items).flatMap((item) => {
-	const href = item.website?.url?.trim();
-	if (!href) return [];
-	return [
-		{
-			href,
-			label: item.network || item.username || href,
-			icon: (item.icon || item.network || '').toLowerCase(),
-		},
-	];
-});
+const profileLinks = resumeProfileLinks();
 
 const githubProfile =
 	profileLinks.find((link) => link.icon.includes('github') || link.label.toLowerCase().includes('github')) ?? null;

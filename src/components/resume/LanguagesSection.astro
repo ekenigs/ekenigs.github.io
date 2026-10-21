@@ -1,38 +1,86 @@
 ---
-import { resume } from '../../data/resume';
-import { isSectionVisible, visibleItems } from '../../data/resume.utils';
+import { customSection, resume } from '../../data/resume';
+import { hasVisibleItems, parseLabeledList, visibleItems } from '../../data/resume.utils';
 import LevelDots from './LevelDots.astro';
 import LevelLegend from './LevelLegend.astro';
+import RichHtml from './RichHtml.astro';
 import Section from './Section.astro';
 import SectionHeading from './SectionHeading.astro';
 
-const section = resume.sections.languages;
-const items = visibleItems(section.items);
+/**
+ * Languages come from the rated `sections.languages` list (level dots) or, when that is hidden,
+ * a custom "Languages" section authored as `<strong>Language:</strong> Level` bullets.
+ */
+const rated = resume.sections.languages;
+const ratedItems = hasVisibleItems(rated) ? visibleItems(rated.items) : [];
+
+const custom = ratedItems.length === 0 ? customSection('Languages') : undefined;
+const customItems = visibleItems(custom?.items);
+const groups = customItems.map((item) => ({
+	id: item.id,
+	entries: parseLabeledList(item.content),
+	html: item.content,
+}));
+
+const title = ratedItems.length > 0 ? rated.title : custom?.title ?? 'Languages';
+const show = ratedItems.length > 0 || customItems.length > 0;
+
 const languageFlags: Record<string, string> = {
 	english: '🇬🇧',
 	german: '🇩🇪',
 	russian: '🇷🇺',
 	latvian: '🇱🇻',
 };
+
+/** "English (C1)" and "English:" both resolve to the "english" flag key. */
+function flagFor(language: string): string {
+	const key = language.toLowerCase().replace(/\s*\(.*$/, '').trim();
+	return languageFlags[key] ?? '🌐';
+}
 ---
 
 {
-	isSectionVisible(section) && items.length > 0 && (
+	show && (
 		<Section id="languages">
-			<SectionHeading>{section.title}</SectionHeading>
-			<LevelLegend scale="languages" />
-			<ul class="grid gap-3 sm:grid-cols-2" data-animate-stagger>
-				{items.map((row) => (
-					<li data-level-card class="list-card flex-wrap">
-						<span class="text-sm font-medium text-zinc-800 dark:text-zinc-200">
-							<span aria-hidden="true">{languageFlags[row.language.toLowerCase()] ?? '🌐'}</span>
-							{' '}
-							{row.language}
-						</span>
-						<LevelDots level={row.level} label={row.language} scale="languages" />
-					</li>
-				))}
-			</ul>
+			<SectionHeading>{title}</SectionHeading>
+			{ratedItems.length > 0 ? (
+				<>
+					<LevelLegend scale="languages" />
+					<ul class="grid gap-3 sm:grid-cols-2" data-animate-stagger>
+						{ratedItems.map((row) => (
+							<li data-level-card class="list-card flex-wrap">
+								<span class="text-sm font-medium text-zinc-800 dark:text-zinc-200">
+									<span aria-hidden="true">{flagFor(row.language)}</span>
+									{' '}
+									{row.language}
+								</span>
+								<LevelDots level={row.level} label={row.language} scale="languages" />
+							</li>
+						))}
+					</ul>
+				</>
+			) : (
+				groups.map((group) =>
+					group.entries ? (
+						<ul class="grid gap-3 sm:grid-cols-2" data-animate-stagger>
+							{group.entries.map((entry) => (
+								<li class="list-card flex-wrap">
+									<span class="text-sm font-medium text-zinc-800 dark:text-zinc-200">
+										<span aria-hidden="true">{flagFor(entry.label)}</span>
+										{' '}
+										{entry.label}
+									</span>
+									<span class="text-xs font-medium text-amber-800 dark:text-amber-300">
+										{entry.values.join(', ')}
+									</span>
+								</li>
+							))}
+						</ul>
+					) : (
+						<RichHtml html={group.html} />
+					),
+				)
+			)}
 		</Section>
 	)
 }

@@ -1,6 +1,6 @@
 ---
-import { resume } from '../../data/resume';
-import { isSectionVisible, visibleItems } from '../../data/resume.utils';
+import { customSection, resume } from '../../data/resume';
+import { hasVisibleItems } from '../../data/resume.utils';
 
 type NavItem = { id: string; label: string };
 
@@ -11,24 +11,26 @@ if (resume.summary.hidden !== true) {
 }
 
 const experience = resume.sections.experience;
-if (isSectionVisible(experience) && visibleItems(experience.items).length > 0) {
+if (hasVisibleItems(experience)) {
 	navItems.push({ id: 'experience', label: experience.title });
 }
 
 const education = resume.sections.education;
-if (isSectionVisible(education) && visibleItems(education.items).length > 0) {
+if (hasVisibleItems(education)) {
 	navItems.push({ id: 'education', label: education.title });
 }
 
-const skills = resume.sections.skills;
-if (isSectionVisible(skills) && visibleItems(skills.items).length > 0) {
+const skills = hasVisibleItems(resume.sections.skills) ? resume.sections.skills : customSection('Skills');
+if (hasVisibleItems(skills)) {
 	navItems.push({ id: 'skills', label: skills.title });
 }
 
 navItems.push({ id: 'portfolio', label: 'Portfolio' });
 
-const languages = resume.sections.languages;
-if (isSectionVisible(languages) && visibleItems(languages.items).length > 0) {
+const languages = hasVisibleItems(resume.sections.languages)
+	? resume.sections.languages
+	: customSection('Languages');
+if (hasVisibleItems(languages)) {
 	navItems.push({ id: 'languages', label: languages.title });
 }
 

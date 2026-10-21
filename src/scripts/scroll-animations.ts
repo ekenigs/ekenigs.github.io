@@ -45,7 +45,7 @@ function initLevelSectionAnimation(
 	speed: LevelSectionSpeed,
 ): void {
 	const section = document.querySelector(`#${sectionId}`);
-	const rows = section?.querySelectorAll("[data-animate-stagger] > li");
+	const rows = section?.querySelectorAll("[data-animate-stagger] > *");
 	if (!section || !rows || rows.length === 0) return;
 
 	const config = levelSectionConfig[speed];

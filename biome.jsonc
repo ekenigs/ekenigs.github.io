@@ -11,7 +11,7 @@
 			"!**/*.astro",
 			"!!**/dist",
 			"!!**/.astro",
-			"!!**/elmar-kenigs.json",
+			"!!**/Elmar-Kenigs-Resume.json",
 			"!!**/node_modules"
 		]
 	},

@@ -1,28 +1,69 @@
 ---
-import { resume } from '../../data/resume';
-import { isSectionVisible, visibleItems } from '../../data/resume.utils';
+import { customSection, resume } from '../../data/resume';
+import { hasVisibleItems, parseLabeledList, visibleItems } from '../../data/resume.utils';
 import LevelDots from './LevelDots.astro';
 import LevelLegend from './LevelLegend.astro';
+import RichHtml from './RichHtml.astro';
 import Section from './Section.astro';
 import SectionHeading from './SectionHeading.astro';
 
-const section = resume.sections.skills;
-const items = visibleItems(section.items);
+/**
+ * Skills come from one of two places in the export: the rated `sections.skills` list (level dots),
+ * or a custom "Skills" section authored as `<strong>Category:</strong> a, b, c` bullets.
+ */
+const rated = resume.sections.skills;
+const ratedItems = hasVisibleItems(rated) ? visibleItems(rated.items) : [];
+
+const custom = ratedItems.length === 0 ? customSection('Skills') : undefined;
+const customItems = visibleItems(custom?.items);
+const groups = customItems.map((item) => ({
+	id: item.id,
+	entries: parseLabeledList(item.content),
+	html: item.content,
+}));
+
+const title = ratedItems.length > 0 ? rated.title : custom?.title ?? 'Skills';
+const show = ratedItems.length > 0 || customItems.length > 0;
 ---
 
 {
-	isSectionVisible(section) && items.length > 0 && (
+	show && (
 		<Section id="skills">
-			<SectionHeading>{section.title}</SectionHeading>
-			<LevelLegend scale="skills" />
-			<ul class="grid gap-3 sm:grid-cols-2" data-animate-stagger>
-				{items.map((skill) => (
-					<li data-level-card class="list-card">
-						<span class="min-w-0 flex-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">{skill.name}</span>
-						<LevelDots level={skill.level} label={skill.name} scale="skills" />
-					</li>
-				))}
-			</ul>
+			<SectionHeading>{title}</SectionHeading>
+			{ratedItems.length > 0 ? (
+				<>
+					<LevelLegend scale="skills" />
+					<ul class="grid gap-3 sm:grid-cols-2" data-animate-stagger>
+						{ratedItems.map((skill) => (
+							<li data-level-card class="list-card">
+								<span class="min-w-0 flex-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">{skill.name}</span>
+								<LevelDots level={skill.level} label={skill.name} scale="skills" />
+							</li>
+						))}
+					</ul>
+				</>
+			) : (
+				groups.map((group) =>
+					group.entries ? (
+						<dl class="divide-y divide-zinc-200/80 dark:divide-zinc-800/80" data-animate-stagger>
+							{group.entries.map((entry) => (
+								<div class="flex flex-col gap-2 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-start sm:gap-6">
+									<dt class="shrink-0 text-sm font-semibold text-zinc-800 dark:text-zinc-200 sm:w-44 sm:pt-1.5">
+										{entry.label}
+									</dt>
+									<dd class="flex min-w-0 flex-wrap gap-2">
+										{entry.values.map((value) => (
+											<span class="interest-chip">{value}</span>
+										))}
+									</dd>
+								</div>
+							))}
+						</dl>
+					) : (
+						<RichHtml html={group.html} />
+					),
+				)
+			)}
 		</Section>
 	)
 }

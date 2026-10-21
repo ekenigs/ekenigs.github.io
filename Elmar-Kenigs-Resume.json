@@ -1,0 +1,551 @@
+{
+  "picture": {
+    "hidden": false,
+    "fit": "cover",
+    "url": "https://rxresu.me/api/uploads/019bef8e-272d-71ef-b900-b19442a3b61c/pictures/1778571733574.jpeg",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 50,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Elmar Kenigs",
+    "headline": "Lead Software Engineer",
+    "email": "elmar.kenigs@gmail.com",
+    "phone": "",
+    "location": "Zurich, CH",
+    "website": {
+      "url": "https://kenigs.dev",
+      "label": ""
+    },
+    "customFields": [
+      {
+        "id": "01a10f83-4631-753a-9dda-2fcaefb9fde9",
+        "icon": "linkedin-logo",
+        "text": "elmar-kenigs",
+        "link": "https://www.linkedin.com/in/elmar-kenigs/"
+      },
+      {
+        "id": "01a10f82-2b57-75a0-aff7-7bb381f8b476",
+        "icon": "github-logo",
+        "text": "ekenigs",
+        "link": "https://github.com/ekenigs"
+      }
+    ]
+  },
+  "summary": {
+    "title": "Summary",
+    "icon": "",
+    "columns": 1,
+    "hidden": false,
+    "showHeading": true,
+    "keepTogether": false,
+    "startOnNewPage": false,
+    "content": "<p data-resume-whitespace=\"preserve\">Lead Software Engineer with 15 years of experience building web and mobile products with TypeScript, Next.js, Node.js, and AWS. Over the last four years I grew from engineer on the Moonbeam web app to leading a team of 7 across web apps for several clients, owning hiring, architecture, and production launches. Before that I led a team of 5 to 7 engineers at Hermes on logistics software that processes thousands of parcels a day. I like taking a feature from the first idea to release and staying hands-on in the code.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "icon": "",
+      "columns": 1,
+      "hidden": true,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "experience": {
+      "title": "Experience",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "f6f1xt2rpi5045buwoe5kcoq",
+          "hidden": false,
+          "company": "OpsLayer, Inc.",
+          "position": "Lead Software Engineer",
+          "location": "Remote",
+          "period": "January 2025 – August 2026",
+          "dates": {
+            "start": "2025-01",
+            "end": "2026-08",
+            "present": false
+          },
+          "website": {
+            "url": "https://opslayer.com",
+            "label": "",
+            "inlineLink": true
+          },
+          "description": "<ul><li><p>Led a team of 7 engineers on web apps for several clients. Grew the team from 3 to 7, ran hiring and task assignment, and took each product from zero to production launch.</p></li><li><p>Owned end-to-end delivery of an infrastructure-as-a-service web app for fintech clients: the Next.js and Mantine frontend, the backend, and the AWS infrastructure (Amplify, Lambda, CloudFront, WAF) defined with CDK.</p></li><li><p data-resume-whitespace=\"preserve\">Drove all technical decisions for a new file storage web app, defining the frontend architecture and the integrations with the backend services that let customers upload and retrieve files.</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "q365bykblyvuxsa303hbq47n",
+          "hidden": false,
+          "company": "OpsLayer, Inc.",
+          "position": "Technical Lead",
+          "location": "Remote",
+          "period": "June 2023 – December 2024",
+          "dates": {
+            "start": "2023-06",
+            "end": "2024-12",
+            "present": false
+          },
+          "website": {
+            "url": "https://opslayer.com",
+            "label": "",
+            "inlineLink": true
+          },
+          "description": "<p data-resume-whitespace=\"preserve\"><em>OpsLayer continued the PureStake team and its products.</em></p><ul><li><p>Owned technical strategy for the Moonbeam web app and a second client web app, including the architecture of a cross-platform TypeScript SDK shared between them.</p></li><li><p>Mentored a team of 3 engineers on third-party library integrations and on E2E testing with Playwright. Reviewed critical PRs before release.</p></li><li><p data-resume-whitespace=\"preserve\">Defined the shared tooling for both apps: Playwright E2E suites, Vitest unit tests, Biome.js linting, and GitHub Actions CI.</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "lf3nrkaovzygekjwhlrnvn5q",
+          "hidden": false,
+          "company": "PureStake, Inc.",
+          "position": "Software Engineer",
+          "location": "Remote",
+          "period": "January 2022 – June 2023",
+          "dates": {
+            "start": "2022-01",
+            "end": "2023-06",
+            "present": false
+          },
+          "website": {
+            "url": "https://purestake.com",
+            "label": "",
+            "inlineLink": true
+          },
+          "description": "<ul><li><p>Built account connection and state management for the first version of the Moonbeam web app, supporting the production, canary, and test environments.</p></li><li><p>Led the frontend migration from Create React App to Next.js and AWS Amplify, improving build times, SEO, and deployment workflows.</p></li><li><p>Introduced Playwright E2E testing across the Moonbeam web app, catching regressions before releases and setting the team's testing standards.</p></li><li><p data-resume-whitespace=\"preserve\">Established the core frontend integration patterns and the library migration that the team continued in Moonbeam v2.</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "trzkxhwgg2pzztkf1tu13dh2",
+          "hidden": false,
+          "company": "E-FARM.COM GmbH",
+          "position": "Full Stack Node.js Software Engineer (Contractor)",
+          "location": "Hamburg, Germany",
+          "period": "June 2021 – January 2022",
+          "dates": {
+            "start": "2021-06",
+            "end": "2022-01",
+            "present": false
+          },
+          "website": {
+            "url": "https://e-farm.com",
+            "label": "",
+            "inlineLink": true
+          },
+          "description": "<ul><li><p>Developed the SmartTrade React Native app for machinery dealers to submit inventory through dynamic forms tied to sales workflows.</p></li><li><p>Built Nest.js backend services and MongoDB models to support diverse machinery data across web and mobile clients.</p></li><li><p data-resume-whitespace=\"preserve\">Connected the React and React Native frontends to the backend via a shared schema sync, enabling auto-generated dealer questionnaires.</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "xnt9d7htemto8s1wtlt75rkx",
+          "hidden": false,
+          "company": "E-FARM.COM GmbH",
+          "position": "Backend Node.js Software Engineer (Contractor)",
+          "location": "Hamburg, Germany",
+          "period": "March 2020 – January 2021",
+          "dates": {
+            "start": "2020-03",
+            "end": "2021-01",
+            "present": false
+          },
+          "website": {
+            "url": "https://e-farm.com",
+            "label": "",
+            "inlineLink": true
+          },
+          "description": "<ul><li><p>Built multiple Node.js microservices with Nest.js and a RabbitMQ event-driven architecture to scale the machinery marketplace.</p></li><li><p>Created a data aggregation service that generates PDF sales documents automatically from internal systems for the sales team.</p></li><li><p data-resume-whitespace=\"preserve\">Developed a microservice that pushes machinery listings to partner websites via third-party APIs.</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "fg0l0l424lef437xpk0hj4br",
+          "hidden": false,
+          "company": "Lokalportal GmbH",
+          "position": "React Frontend Engineer (Contractor)",
+          "location": "Hamburg, Germany",
+          "period": "August 2019 – March 2020",
+          "dates": {
+            "start": "2019-08",
+            "end": "2020-03",
+            "present": false
+          },
+          "website": {
+            "url": "https://start.lokalportal.de",
+            "label": "",
+            "inlineLink": true
+          },
+          "description": "<ul><li><p>Improved frontend business logic and state management for a public news and community portal.</p></li><li><p>Migrated class-based React components to Hooks, improving code readability and maintenance.</p></li><li><p data-resume-whitespace=\"preserve\">Hardened the authentication layer with TypeScript and Cypress tests.</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "v0b6vvzblbg0j2xe6eyg279v",
+          "hidden": false,
+          "company": "Hermes Europe GmbH",
+          "position": "Lead Full-Stack Software Engineer",
+          "location": "Hamburg, Germany",
+          "period": "July 2018 – March 2019",
+          "dates": {
+            "start": "2018-07",
+            "end": "2019-03",
+            "present": false
+          },
+          "website": {
+            "url": "https://www.hermesworld.com",
+            "label": "",
+            "inlineLink": true
+          },
+          "description": "<ul><li><p>Promoted to Lead Engineer on a new warehouse logistics project. Owned the technical architecture and daily coordination of 5 to 7 engineers, whom I hired and onboarded with technical interviews and onboarding docs I wrote.</p></li><li><p>Built an end-to-end parcel processing and tracking system: Node.js backend, React web app, React Native mobile app, and Electron desktop app.</p></li><li><p data-resume-whitespace=\"preserve\">Delivered warehouse management tools with the product team, enabling daily processing of thousands of international parcels.</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "x7ushh2j0fd90q5ekks2v7ra",
+          "hidden": false,
+          "company": "Hermes Europe GmbH",
+          "position": "Full-Stack Software Engineer",
+          "location": "Hamburg, Germany",
+          "period": "November 2015 – July 2018",
+          "dates": {
+            "start": "2015-11",
+            "end": "2018-07",
+            "present": false
+          },
+          "website": {
+            "url": "https://www.hermesworld.com",
+            "label": "",
+            "inlineLink": true
+          },
+          "description": "<ul><li><p>Built backend microservices (Node.js) and customer apps (Angular.js) for a large-scale logistics platform.</p></li><li><p>Created the public parcel tracking page end-to-end, used by thousands of end customers daily.</p></li><li><p data-resume-whitespace=\"preserve\">Developed a full-stack label generation system processing thousands of international e-commerce parcels daily.</p></li></ul><p></p>",
+          "roles": []
+        },
+        {
+          "id": "de3l1438mbwmo5z0m9h2xhxb",
+          "hidden": false,
+          "company": "Various",
+          "position": "Web & Mobile Developer, earlier roles",
+          "location": "Riga, Latvia · Frankfurt am Main, Germany",
+          "period": "August 2011 – October 2015",
+          "dates": {
+            "start": "2011-08",
+            "end": "2015-10",
+            "present": false
+          },
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li><p>yasni GmbH (2014–2015): maintained the UI of a high-traffic search engine with PHP and JavaScript.</p></li><li><p>Freelance (2013–2014): built and redesigned WordPress sites for small businesses.</p></li><li><p data-resume-whitespace=\"preserve\">Agent Stick (2011–2013): built and launched an iOS game with Objective-C and Cocos2D that reached several hundred thousand App Store downloads.</p></li></ul><p></p>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "dyfqujieck66uhec3z109omt",
+          "hidden": false,
+          "school": "Riga Technical University",
+          "degree": "Bachelor of Engineering",
+          "area": "Computer Science",
+          "grade": "",
+          "location": "",
+          "period": "September 2010 – July 2013",
+          "dates": {
+            "start": "2010-09",
+            "end": "2013-07",
+            "present": false
+          },
+          "website": {
+            "url": "https://www.rtu.lv/en",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "skills": {
+      "title": "Skills",
+      "icon": "",
+      "columns": 1,
+      "hidden": true,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [],
+      "keywordLayout": "inline",
+      "layout": "default"
+    },
+    "languages": {
+      "title": "Languages",
+      "icon": "",
+      "columns": 1,
+      "hidden": true,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "yb9u5xyeb9wexkx42snwblmw",
+          "hidden": false,
+          "language": "English (C1)",
+          "fluency": "",
+          "level": 4
+        },
+        {
+          "id": "h5qywiahhmneg78ukjtshba4",
+          "hidden": false,
+          "language": "German (B2)",
+          "fluency": "",
+          "level": 4
+        },
+        {
+          "id": "e8svj17k0juasefagagx5wgg",
+          "hidden": false,
+          "language": "Russian (Native)",
+          "fluency": "",
+          "level": 5
+        },
+        {
+          "id": "qgjxb7k5vcfftyxe2rzkpdik",
+          "hidden": false,
+          "language": "Latvian (C1)",
+          "fluency": "",
+          "level": 4
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "drkl5sni9dgwdc3a8vgnbdh4",
+          "hidden": false,
+          "icon": "person-simple-snowboard",
+          "iconColor": "",
+          "name": "Snowboarding",
+          "keywords": []
+        },
+        {
+          "id": "lf58cd9glw13chr8nlfrv1rv",
+          "hidden": false,
+          "icon": "person-simple-walk",
+          "iconColor": "",
+          "name": "Hiking",
+          "keywords": []
+        },
+        {
+          "id": "019d8cb6-501e-76b2-ba75-83ec9050909f",
+          "hidden": false,
+          "icon": "waves",
+          "iconColor": "",
+          "name": "Kitesurfing",
+          "keywords": []
+        }
+      ]
+    },
+    "awards": {
+      "title": "Awards",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "publications": {
+      "title": "Publications",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    }
+  },
+  "customSections": [
+    {
+      "title": "Skills",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "id": "01a1530c-2b6a-7799-9582-fbd6ea6d4946",
+      "type": "summary",
+      "items": [
+        {
+          "id": "01a1530c-2b6a-7799-9582-f7c43f953144",
+          "hidden": false,
+          "content": "<ul><li><p data-resume-whitespace=\"preserve\"><strong>Core Competencies:</strong> Technical Leadership, System Architecture, Full-Stack Development</p></li><li><p data-resume-whitespace=\"preserve\"><strong>AI Dev Tools &amp; Agents:</strong> Claude Code, Cursor, Agent Skills, MCP (Model Context Protocol)</p></li><li><p data-resume-whitespace=\"preserve\"><strong>Languages &amp; Runtimes:</strong> TypeScript, Node.js</p></li><li><p data-resume-whitespace=\"preserve\"><strong>Frameworks &amp; Libraries:</strong> React.js, Next.js, React Native, Nest.js, TanStack, tRPC, Electron</p></li><li><p data-resume-whitespace=\"preserve\"><strong>State Management:</strong> Jotai, Redux, React Context</p></li><li><p data-resume-whitespace=\"preserve\"><strong>UI &amp; Styling:</strong> TailwindCSS, Mantine, MaterialUI</p></li><li><p data-resume-whitespace=\"preserve\"><strong>Databases &amp; Messaging:</strong> MongoDB, RabbitMQ</p></li><li><p data-resume-whitespace=\"preserve\"><strong>Cloud &amp; DevOps:</strong> AWS (Amplify, Lambda, CloudFront, WAF, CDK), GitHub Actions, CI/CD</p></li><li><p data-resume-whitespace=\"preserve\"><strong>Static Analysis &amp; Linting:</strong> ESLint, Biome.js, Prettier, Oxlint, Oxfmt, Fallow</p></li><li><p data-resume-whitespace=\"preserve\"><strong>Testing:</strong> Vitest, Jest, Playwright, Cypress, Unit &amp; E2E Testing</p></li></ul><p></p>"
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "showHeading": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "id": "01a15310-3475-7172-9897-dfcf9452b085",
+      "type": "summary",
+      "items": [
+        {
+          "id": "01a15310-3474-7489-918a-2e405cfca144",
+          "hidden": false,
+          "content": "<ul><li><p data-resume-whitespace=\"preserve\"><span><strong>Russian:</strong> Native</span></p></li><li><p data-resume-whitespace=\"preserve\"><span><strong>English:</strong> C1</span></p></li><li><p data-resume-whitespace=\"preserve\"><span><strong>German:</strong> B2</span></p></li><li><p data-resume-whitespace=\"preserve\"><span><strong>Latvian:</strong> C1</span></p></li></ul><p></p>"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "template": "meowth",
+    "layout": {
+      "sidebarWidth": 30,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "summary",
+            "profiles",
+            "experience",
+            "education",
+            "projects",
+            "volunteer",
+            "references",
+            "certifications",
+            "awards",
+            "publications",
+            "01a1530c-2b6a-7799-9582-fbd6ea6d4946",
+            "01a15310-3475-7172-9897-dfcf9452b085"
+          ],
+          "sidebar": [
+            "skills",
+            "languages",
+            "interests"
+          ]
+        }
+      ]
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 4,
+      "marginX": 10,
+      "marginY": 8,
+      "format": "a4",
+      "locale": "en-US",
+      "dateFormat": "long",
+      "hideLinkUnderline": false,
+      "hideIcons": false,
+      "hideSectionIcons": true
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "rectangle-full"
+      },
+      "colors": {
+        "primary": "rgba(8, 145, 178, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "400",
+          "600"
+        ],
+        "fontSize": 9,
+        "lineHeight": 1.35
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 12,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": "",
+    "styleRules": [],
+    "check": {
+      "ignored": [
+        "MISSING_PHONE:/basics/phone",
+        "PICTURE_PRESENT:/picture"
+      ],
+      "hiddenTerms": []
+    }
+  }
+}
