@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import photo from "../assets/profile/photo-320.jpg";
+import { basics, now, summary } from "../data/resume";
+---
+
+<section class="hero" aria-label="Introduction">
+	<div class="card hero__main">
+		<div class="hero__top">
+			<Image
+				src={photo}
+				alt={`Portrait of ${basics.name}`}
+				width={144}
+				height={144}
+				loading="eager"
+				fetchpriority="high"
+				class="hero__photo"
+			/>
+			<div class="pill tone-3">
+				<span class="pill__dot" aria-hidden="true"></span>
+				<span>{now.role}</span>
+			</div>
+		</div>
+		<div class="hero__title">
+			<h1>{basics.name}</h1>
+			<p class="hero__headline">
+				{basics.headline}, <span class="accent">{basics.focus}</span>
+			</p>
+		</div>
+		<p class="hero__summary">{summary}</p>
+		<div class="hero__actions">
+			<a href={`mailto:${basics.email}`} class="btn btn--primary">
+				<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+				<span>Email me</span>
+			</a>
+			<a href={basics.github} class="btn" target="_blank" rel="noopener noreferrer">
+				<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"></path><path d="M16 7l5 5-5 5"></path></svg>
+				<span>GitHub</span>
+			</a>
+			<a href={basics.linkedin} class="btn" target="_blank" rel="noopener noreferrer">
+				<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"></path><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="hero__bento">
+		<div class="tile tile--wide solid-1">
+			<div class="mono-label">// now</div>
+			<p class="tile__lead">{now.text}</p>
+			<a href={now.url} target="_blank" rel="noopener noreferrer" class="tile__link">{now.label} ↗</a>
+		</div>
+		<div class="tile solid-2">
+			<div class="tile__stat">{basics.yearsOfExperience}</div>
+			<div class="tile__caption">years building web and mobile products</div>
+		</div>
+		<div class="tile solid-4">
+			<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+			<div class="tile__caption">{basics.location}<br />{basics.permit}</div>
+		</div>
+	</div>
+</section>

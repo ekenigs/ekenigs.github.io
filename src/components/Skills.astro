@@ -1,0 +1,60 @@
+---
+import { basics, education, interests, languages, skills } from "../data/resume";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<section class="split">
+	<div id="skills" class="card section-card skills">
+		<SectionHeading index="03">Skills</SectionHeading>
+		{
+			skills.map((group) => (
+				<div class="skill-group">
+					<h3 class="eyebrow">{group.title}</h3>
+					<ul class="chips">
+						{group.items.map((item) => (
+							<li class={`chip tint-${group.tone}`}>{item}</li>
+						))}
+					</ul>
+				</div>
+			))
+		}
+	</div>
+
+	<div class="split__side">
+		<div class="card side-card">
+			<h2 class="eyebrow">Education</h2>
+			<div class="side-card__title">{education.degree}</div>
+			<div class="side-card__text">
+				<a href={education.url} target="_blank" rel="noopener noreferrer">{education.school}</a>
+				{" · "}<span class="mono" style="white-space: nowrap">{education.period}</span>
+			</div>
+		</div>
+
+		<div class="side-card solid-4">
+			<h2 class="mono-label">// languages</h2>
+			<ul class="pairs">
+				{
+					languages.map((language) => (
+						<li>
+							<strong>{language.name}</strong>
+							<span>{language.level}</span>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+
+		<div class="side-card solid-3">
+			<h2 class="mono-label">// off the keyboard</h2>
+			<ul class="chips">
+				{interests.map((interest) => <li class="chip chip--ink">{interest}</li>)}
+			</ul>
+		</div>
+
+		<div id="contact" class="side-card side-card--grow solid-2">
+			<h2 class="contact__title">Let’s build something good.</h2>
+			<p>Based in {basics.location}. The fastest way to reach me is email.</p>
+			<a href={`mailto:${basics.email}`} class="btn btn--ink">{basics.email}</a>
+		</div>
+	</div>
+</section>

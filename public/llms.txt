@@ -1,18 +1,18 @@
 # Elmar Kenigs — personal site
 
-> Online resume for Elmar Kenigs, Lead Software Engineer (full-stack: TypeScript, Next.js, Node.js, AWS).
+> Online resume for Elmar Kenigs, Lead Software Engineer (full-stack: TypeScript, React, Next.js, Node.js, AWS).
 
 ## Canonical URL
 
-- https://ekenigs.github.io/
+- https://kenigs.dev/
 
 ## What is here
 
-- Single-page resume: summary, experience, education, projects, skills, portfolio, languages, interests.
+- Single-page resume: summary, experience, selected work, skills, education, languages, interests.
 - Source of truth for biographical and professional details is the HTML page at the URL above.
 
 ## For automated tools
 
-- Prefer fetching `https://ekenigs.github.io/` for up-to-date content.
-- Machine-readable sitemap: `https://ekenigs.github.io/sitemap-index.xml`
-- Crawl policy: `https://ekenigs.github.io/robots.txt`
+- Prefer fetching `https://kenigs.dev/` for up-to-date content.
+- Machine-readable sitemap: `https://kenigs.dev/sitemap-index.xml`
+- Crawl policy: `https://kenigs.dev/robots.txt`

@@ -1,0 +1,47 @@
+---
+import { experience } from "../data/resume";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<section id="experience" class="card section-card">
+	<SectionHeading index="01">Experience</SectionHeading>
+	{
+		experience.map((job) => (
+			<article class="job">
+				<div class="job__meta">
+					<span class={`job__marker solid-${job.tone}`} aria-hidden="true" />
+					<div class="job__period">{job.period}</div>
+					<div class="job__location">{job.location}</div>
+				</div>
+				<div class="job__body">
+					<h3>
+						{job.role} ·{" "}
+						{job.url ? (
+							<a
+								href={job.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								class:list={["job__company", job.current && "accent"]}
+							>
+								{job.company}
+							</a>
+						) : (
+							<span class="job__company">{job.company}</span>
+						)}
+					</h3>
+					{job.note && <p class="job__note">{job.note}</p>}
+					<ul class="job__highlights">
+						{job.highlights.map((line) => (
+							<li>{line}</li>
+						))}
+					</ul>
+					<ul class="tags" aria-label="Technologies">
+						{job.tags.map((tag) => (
+							<li class={`tag tint-${job.tone}`}>{tag}</li>
+						))}
+					</ul>
+				</div>
+			</article>
+		))
+	}
+</section>
