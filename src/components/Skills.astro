@@ -9,7 +9,7 @@ import SectionHeading from "./SectionHeading.astro";
 		{
 			skills.map((group) => (
 				<div class="skill-group">
-					<h3 class="eyebrow">{group.title}</h3>
+					<h3 class="mono-label label--slash">{group.title}</h3>
 					<ul class="chips">
 						{group.items.map((item) => (
 							<li class={`chip tint-${group.tone}`}>{item}</li>
@@ -22,7 +22,7 @@ import SectionHeading from "./SectionHeading.astro";
 
 	<div class="split__side">
 		<div class="card side-card">
-			<h2 class="eyebrow">Education</h2>
+			<h2 class="mono-label label--slash">Education</h2>
 			<div class="side-card__title">{education.degree}</div>
 			<div class="side-card__text">
 				<a href={education.url} target="_blank" rel="noopener noreferrer">{education.school}</a>

@@ -126,12 +126,13 @@ html.dark {
 		opacity: 0.9;
 	}
 
-	.eyebrow {
-		font-size: 13px;
-		font-weight: 600;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
+	.label--slash {
 		color: var(--muted);
+		text-transform: lowercase;
+	}
+
+	.label--slash::before {
+		content: "// ";
 	}
 
 	/* Solid colour blocks and their tints */
