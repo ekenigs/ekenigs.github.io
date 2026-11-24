@@ -1,30 +1,37 @@
 {
-	"version": 1,
-	"skills": {
-		"caveman": {
-			"source": "juliusbrussee/caveman",
-			"sourceType": "github",
-			"computedHash": "a818cdc41dcfaa50dd891c5cb5e5705968338de02e7e37949ca56e8c30ad4176"
-		},
-		"frontend-design": {
-			"source": "anthropics/skills",
-			"sourceType": "github",
-			"computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
-		},
-		"tailwind-css-patterns": {
-			"source": "giuseppe-trisciuoglio/developer-kit",
-			"sourceType": "github",
-			"computedHash": "6092620c3af955a46ea2b94ca8a40197ac8392e6bbdc8c7515659328b186c770"
-		},
-		"tailwind-design-system": {
-			"source": "wshobson/agents",
-			"sourceType": "github",
-			"computedHash": "988d80e52c67c3692d43cc963b6a048a239895e88b272b061de55370d0f8efc3"
-		},
-		"tailwindcss-advanced-layouts": {
-			"source": "josiahsiegel/claude-plugin-marketplace",
-			"sourceType": "github",
-			"computedHash": "fa08c5757b8f24df2d412543d370bc25d8c14eadeb27be4112b2354323f5889f"
-		}
-	}
+  "version": 2,
+  "skills": {
+    "caveman": {
+      "source": "juliusbrussee/caveman",
+      "sourceType": "github",
+      "computedHash": "f3fa1416fca89f20c93d31b7a728ff752465a939ab9cb0a97d7ef7ca564b7f7b"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "a7c81a25c7ea1972f7049cd0282545c72ae92237c1b45ba7b1370fab498f5f9b"
+    },
+    "modern-web-guidance": {
+      "source": "GoogleChrome/modern-web-guidance",
+      "commit": "2b4aa13a72dd47cd135b06ce5abfccd92e19b24f",
+      "sourceType": "github",
+      "skillPath": "skills/modern-web-guidance/SKILL.md",
+      "computedHash": "1a97aea5d1c5abbf1b7b022ae7a2833a014627f741ba3cbd8cb6249a3ab359db"
+    },
+    "tailwind-css-patterns": {
+      "source": "giuseppe-trisciuoglio/developer-kit",
+      "sourceType": "github",
+      "computedHash": "9f84955f461d236a7ec7adf52934ce8389406f2d28e63b7e25bd2d134d5e50d2"
+    },
+    "tailwind-design-system": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "039353533a86cecbeb9f05fccdf01fc1434bc232b0981831849dd566eaecf663"
+    },
+    "tailwindcss-advanced-layouts": {
+      "source": "josiahsiegel/claude-plugin-marketplace",
+      "sourceType": "github",
+      "computedHash": "04524029d5c8e0690720d0865f56c31ebadd5ccb77a51ab2649bf65670948364"
+    }
+  }
 }
