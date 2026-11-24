@@ -1,17 +1,12 @@
-@import "@fontsource-variable/inter";
-@import "@fontsource-variable/space-grotesk";
-@import "@fontsource-variable/jetbrains-mono";
-
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-	--font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-	--font-display:
-		"Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-	--font-mono:
-		"JetBrains Mono Variable", ui-monospace, SFMono-Regular, monospace;
+/* Font families (with their fallbacks) come from the Astro Fonts API, see astro.config. */
+@theme inline {
+	--font-sans: var(--font-inter);
+	--font-display: var(--font-space-grotesk);
+	--font-mono: var(--font-jetbrains-mono);
 }
 
 :root {

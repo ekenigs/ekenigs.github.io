@@ -57,7 +57,7 @@ async function screenshots(folder: string) {
 		.map(([, mod]) => mod.default);
 	return Promise.all(
 		sources.map(async (src) => ({
-			thumb: await getImage({ src, width: 720, format: "webp" }),
+			thumb: await getImage({ src, width: 720, widths: [320, 560, 720], format: "webp" }),
 			full: await getImage({ src, width: 1800, format: "webp" }),
 			/** Full-page captures scroll vertically instead of being fitted to the dialog. */
 			tall: src.height > src.width * 1.2,
@@ -89,6 +89,8 @@ const items = await Promise.all(
 							{cover ? (
 								<img
 									src={cover.thumb.src}
+									srcset={cover.thumb.srcSet.attribute}
+									sizes="(max-width: 640px) calc(100vw - 80px), 300px"
 									width={cover.thumb.attributes.width}
 									height={cover.thumb.attributes.height}
 									alt=""
