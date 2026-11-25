@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/stable/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.6.8/schema.json",
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
@@ -11,7 +11,16 @@
 			"!**/*.astro",
 			"!!**/dist",
 			"!!**/.astro",
-			"!!**/node_modules"
+			"!!**/node_modules",
+			"!.agents",
+			"!.claude",
+			"!.codex",
+			"!.fallow",
+			"!.impeccable",
+			"!.github/skills",
+			"!.github/hooks",
+			"!skills-lock.json",
+			"!pnpm-workspace.yaml"
 		]
 	},
 	"formatter": {
@@ -21,7 +30,7 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"preset": "recommended"
 		}
 	},
 	"css": {
