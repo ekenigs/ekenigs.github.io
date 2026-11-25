@@ -27,8 +27,9 @@ const jsonLd: Record<string, unknown> = {
 
 <MainLayout title={pageTitle} description={metaDescription} ogImageUrl={ogImageUrl} jsonLd={jsonLd}>
 	<div class="page">
+		<a class="skip-link" href="#main">Skip to content</a>
 		<SiteHeader />
-		<main class="page__main">
+		<main id="main" class="page__main" tabindex="-1">
 			<Hero />
 			<Experience />
 			<Work />
