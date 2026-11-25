@@ -1,6 +1,6 @@
 # Elmar Kenigs
 
-> Online resume for Elmar Kenigs, Lead Software Engineer (full-stack: TypeScript, React, Next.js, Node.js, AWS).
+> Online resume for Elmar Kenigs, Lead Software Engineer (TypeScript, React, Next.js, Node.js, AWS, Web3). Founding engineer at Sudory; previously led the Tanssi, Moonbeam, and DataHaven dApp teams at OpsLayer.
 
 The site is a single page. The HTML page is the source of truth for biographical and professional details.
 

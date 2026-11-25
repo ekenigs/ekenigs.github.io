@@ -1,5 +1,5 @@
 ---
-import { basics, education, interests, languages, skills } from "../data/resume";
+import { basics, education, interests, languages, skills, volunteering } from "../data/resume";
 import SectionHeading from "./SectionHeading.astro";
 ---
 
@@ -27,6 +27,15 @@ import SectionHeading from "./SectionHeading.astro";
 			<div class="side-card__text">
 				<a href={education.url} target="_blank" rel="noopener noreferrer">{education.school}</a>
 				{" · "}<span class="mono" style="white-space: nowrap">{education.period}</span>
+			</div>
+		</div>
+
+		<div class="card side-card">
+			<h2 class="mono-label label--slash">Volunteering</h2>
+			<div class="side-card__title">{volunteering.role} · {volunteering.org}</div>
+			<div class="side-card__text">
+				{volunteering.text}{" "}
+				<a href={volunteering.url} target="_blank" rel="noopener noreferrer">webzurich.ch</a>
 			</div>
 		</div>
 
