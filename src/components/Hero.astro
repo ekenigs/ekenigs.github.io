@@ -51,12 +51,17 @@ import { basics, now, summary } from "../data/resume";
 			<a href={now.url} target="_blank" rel="noopener noreferrer" class="tile__link">{now.label} ↗</a>
 		</div>
 		<div class="tile solid-2">
-			<div class="tile__stat">{basics.yearsOfExperience}</div>
-			<div class="tile__caption">years building web and mobile products</div>
+			<div class="tile__stat">{basics.yearsOfExperience}<span class="tile__unit"> yrs</span></div>
+			<div class="tile__caption">shipping web & mobile products</div>
 		</div>
 		<div class="tile solid-4">
-			<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
-			<div class="tile__caption">{basics.location}<br />{basics.permit}</div>
+			<div class="tile__place">
+				<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+				<div class="tile__stat tile__stat--city">{basics.location.split(",")[0]}</div>
+			</div>
+			<div class="tile__caption">
+				{basics.location.split(",")[1]?.trim()}<br />{basics.permit.replace("Swiss ", "")}
+			</div>
 		</div>
 	</div>
 </section>
