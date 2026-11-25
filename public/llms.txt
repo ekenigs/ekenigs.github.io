@@ -1,18 +1,14 @@
-# Elmar Kenigs — personal site
+# Elmar Kenigs
 
-> Online resume for Elmar Kenigs, Lead Software Engineer (full-stack: TypeScript, Next.js, Node.js, AWS).
+> Online resume for Elmar Kenigs, Lead Software Engineer (TypeScript, React, Next.js, Node.js, AWS, Web3). Founding engineer at Sudory; previously led the Tanssi, Moonbeam, and DataHaven dApp teams at OpsLayer.
 
-## Canonical URL
+The site is a single page. The HTML page is the source of truth for biographical and professional details.
 
-- https://ekenigs.github.io/
+## Pages
 
-## What is here
+- [Resume](https://kenigs.dev/): summary, experience, selected work, skills, education, languages, interests
 
-- Single-page resume: summary, experience, education, projects, skills, portfolio, languages, interests.
-- Source of truth for biographical and professional details is the HTML page at the URL above.
+## Optional
 
-## For automated tools
-
-- Prefer fetching `https://ekenigs.github.io/` for up-to-date content.
-- Machine-readable sitemap: `https://ekenigs.github.io/sitemap-index.xml`
-- Crawl policy: `https://ekenigs.github.io/robots.txt`
+- [Sitemap](https://kenigs.dev/sitemap-index.xml): machine-readable list of pages
+- [Robots](https://kenigs.dev/robots.txt): crawl policy

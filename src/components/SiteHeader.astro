@@ -1,0 +1,50 @@
+---
+import { basics } from "../data/resume";
+---
+
+<header class="site-header">
+	<a href="/" class="brand" aria-label={`${basics.initials} ${basics.site}, ${basics.name}, home`}>
+		<span class="brand__mark" aria-hidden="true">{basics.initials}</span>
+		<span class="brand__handle">{basics.site}</span>
+	</a>
+	<nav aria-label="Sections" class="site-nav">
+		<a href="#experience" class="site-nav__link">Experience</a>
+		<a href="#work" class="site-nav__link">Work</a>
+		<a href="#skills" class="site-nav__link">Skills</a>
+		<a href="#education" class="site-nav__link">Education</a>
+		<a href="#volunteering" class="site-nav__link">Volunteering</a>
+		<a href="#contact" class="site-nav__link">Contact</a>
+	</nav>
+	<button
+		type="button"
+		class="site-nav__link theme-toggle"
+		aria-label="Switch to dark theme"
+		data-theme-toggle
+	>
+		<svg class="theme-toggle__moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg>
+		<svg class="theme-toggle__sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+	</button>
+</header>
+
+<script>
+	const root = document.documentElement;
+	const button = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
+
+	function syncLabel() {
+		button?.setAttribute(
+			"aria-label",
+			root.classList.contains("dark") ? "Switch to light theme" : "Switch to dark theme",
+		);
+	}
+
+	syncLabel();
+	button?.addEventListener("click", () => {
+		const dark = root.classList.toggle("dark");
+		try {
+			localStorage.setItem("theme", dark ? "dark" : "light");
+		} catch {
+			/* storage unavailable (private mode) */
+		}
+		syncLabel();
+	});
+</script>

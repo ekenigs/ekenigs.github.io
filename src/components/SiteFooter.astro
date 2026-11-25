@@ -1,0 +1,11 @@
+---
+import { basics } from "../data/resume";
+
+const built = new Date();
+const updated = built.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+---
+
+<footer class="site-footer">
+	<span>© {built.getFullYear()} {basics.name}</span>
+	<span>Last updated {updated}</span>
+</footer>

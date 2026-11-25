@@ -1,19 +1,18 @@
 ---
-import ThemeToggle from '../components/ThemeToggle.astro';
-import '../styles/global.css';
+import { Font } from "astro:assets";
+import "../styles/global.css";
 
 type LayoutProps = {
 	title?: string;
 	description?: string;
-	content?: { title?: string };
 	ogImageUrl?: string;
 	jsonLd?: Record<string, unknown>;
 };
 
-const { title: titleProp, description, content, ogImageUrl, jsonLd } = Astro.props as LayoutProps;
+const { title, description, ogImageUrl, jsonLd } = Astro.props as LayoutProps;
 
-const pageTitle = titleProp ?? content?.title ?? 'Elmar Kenigs';
-const metaDescription = description?.trim() ?? '';
+const pageTitle = title ?? "Elmar Kenigs";
+const metaDescription = description?.trim() ?? "";
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
 const absolutePageUrl = canonicalURL.href;
 const isProduction = import.meta.env.PROD;
@@ -22,21 +21,19 @@ const isProduction = import.meta.env.PROD;
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- Apply saved theme before paint to avoid flash; default is dark when unset. -->
+		<!-- Apply the saved theme before paint to avoid a flash; falls back to the OS preference. -->
 		<script is:inline>
 			(function () {
+				var dark = false;
 				try {
-					var k = "theme";
-					var s = localStorage.getItem(k);
-					if (s === "light") document.documentElement.classList.remove("dark");
-					else document.documentElement.classList.add("dark");
-				} catch (e) {
-					document.documentElement.classList.add("dark");
-				}
+					var saved = localStorage.getItem("theme");
+					dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+				} catch (e) {}
+				document.documentElement.classList.toggle("dark", dark);
 			})();
 		</script>
 		<meta charset="utf-8" />
-		<meta name="color-scheme" content="dark light" />
+		<meta name="color-scheme" content="light dark" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		{metaDescription && <meta name="description" content={metaDescription} />}
@@ -51,6 +48,9 @@ const isProduction = import.meta.env.PROD;
 		<meta name="twitter:title" content={pageTitle} />
 		{metaDescription && <meta name="twitter:description" content={metaDescription} />}
 		{ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+		<Font cssVariable="--font-inter" preload={[{ subset: "latin" }]} />
+		<Font cssVariable="--font-space-grotesk" preload={[{ subset: "latin" }]} />
+		<Font cssVariable="--font-jetbrains-mono" preload={[{ subset: "latin" }]} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{pageTitle}</title>
 		{jsonLd && (
@@ -60,18 +60,7 @@ const isProduction = import.meta.env.PROD;
 			<script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="e7ca7814-6665-47a0-a924-00ea0476fd36"></script>
 		)}
 	</head>
-	<body class="min-h-dvh">
-		<canvas
-			data-cursor-trail
-			class="pointer-events-none fixed inset-0 z-50"
-			aria-hidden="true"
-		></canvas>
-		<ThemeToggle />
+	<body>
 		<slot />
-		<script>
-			import { initScrollAnimations } from '../scripts/scroll-animations';
-			initScrollAnimations();
-		</script>
-		<script is:inline defer fetchpriority="low" src="/scripts/cursor-trail.js"></script>
 	</body>
 </html>
