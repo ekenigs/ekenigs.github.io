@@ -255,22 +255,6 @@ html.dark {
 		color: var(--ink);
 	}
 
-	.site-nav__cta {
-		text-decoration: none;
-		font-size: 15px;
-		font-weight: 600;
-		padding: 12px 18px;
-		border-radius: 12px;
-		background: var(--inverse-bg);
-		color: var(--inverse-fg);
-		transition: opacity 0.15s;
-	}
-
-	.site-nav__cta:hover {
-		color: var(--inverse-fg);
-		opacity: 0.85;
-	}
-
 	.theme-toggle {
 		display: inline-flex;
 		align-items: center;
@@ -359,6 +343,11 @@ html.dark {
 		font-size: clamp(20px, 2.4vw, 28px);
 		font-weight: 500;
 		color: var(--ink-2);
+		text-wrap: balance;
+	}
+
+	.hero__focus {
+		display: block;
 	}
 
 	.hero__summary {
@@ -919,6 +908,15 @@ html.dark {
 
 		.gallery {
 			border-radius: 20px;
+		}
+
+		.site-nav {
+			gap: 0;
+		}
+
+		.site-nav__link {
+			font-size: 14px;
+			padding: 12px 10px;
 		}
 	}
 }

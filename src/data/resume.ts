@@ -28,7 +28,7 @@ export const basics = {
 	name: "Elmar Kenigs",
 	initials: "EK",
 	headline: "Lead Software Engineer",
-	focus: "TypeScript, React & AWS",
+	focus: "TypeScript, React, Node.js & AWS",
 	email: "elmar.kenigs@gmail.com",
 	location: "Zurich, Switzerland",
 	permit: "Swiss B permit",
@@ -39,7 +39,7 @@ export const basics = {
 };
 
 export const summary =
-	"Lead Software Engineer with 15 years of experience building web and mobile products with TypeScript, React, Next.js, Node.js, and AWS. Since July 2026 I have been the founding engineer at Sudory, building the AWS platform that scans customers' SaaS and cloud tools for compliance evidence. Before that, over four years, I grew from engineer on the Moonbeam dApp to leading a team of 7 across the Tanssi, Moonbeam, and DataHaven dApps, owning hiring, architecture, and mainnet launches. Earlier I led a team of 5 to 7 engineers at Hermes on logistics software that processes thousands of parcels a day. I like taking a feature from the first idea to release and staying hands-on in the code.";
+	"Lead Software Engineer with 15 years of experience building web and mobile products with TypeScript, React, Next.js, Node.js, and AWS. Since July 2026 I have been the founding engineer at Sudory, building the AWS platform that scans the SaaS and cloud tools of its customers for compliance evidence. Before that, over four years, I grew from engineer on the Moonbeam dApp to leading a team of 7 across the Tanssi, Moonbeam, and DataHaven dApps, owning hiring, architecture, and mainnet launches. Earlier I led a team of 5 to 7 engineers at Hermes on logistics software that processes thousands of parcels a day. I like taking a feature from the first idea to release and staying hands-on in the code.";
 
 export const now = {
 	role: "Founding Engineer at Sudory",
