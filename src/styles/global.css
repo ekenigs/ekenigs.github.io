@@ -239,6 +239,7 @@ html.dark {
 		flex-wrap: wrap;
 		align-items: center;
 		gap: 4px;
+		margin-left: auto;
 	}
 
 	.site-nav__link {
@@ -880,6 +881,10 @@ html.dark {
 		overflow-wrap: anywhere;
 	}
 
+	.side-card#contact .btn {
+		align-self: center;
+	}
+
 	/* Footer */
 	.site-footer {
 		display: flex;
@@ -893,7 +898,10 @@ html.dark {
 	}
 
 	@media (max-width: 640px) {
-		.hero__main,
+		.hero__main {
+			padding: 28px 20px;
+		}
+
 		.section-card {
 			padding: 32px 24px;
 		}
@@ -910,8 +918,54 @@ html.dark {
 			border-radius: 20px;
 		}
 
+		.site-header {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			grid-template-areas:
+				"brand toggle"
+				"nav nav";
+			align-items: center;
+		}
+
+		.brand {
+			grid-area: brand;
+		}
+
+		.theme-toggle {
+			grid-area: toggle;
+		}
+
 		.site-nav {
+			grid-area: nav;
+			margin-left: 0;
 			gap: 0;
+		}
+
+		.hero__top {
+			flex-wrap: nowrap;
+			gap: 12px;
+		}
+
+		.hero__photo {
+			width: 64px;
+			height: 64px;
+			flex: none;
+		}
+
+		.pill {
+			font-size: 13px;
+			padding: 8px 12px;
+			gap: 8px;
+		}
+
+		.hero__actions {
+			gap: 8px;
+		}
+
+		.hero__actions .btn {
+			padding: 12px 10px;
+			gap: 6px;
+			font-size: 14px;
 		}
 
 		.site-nav__link {
